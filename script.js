@@ -30,9 +30,7 @@ function shootLasers(){
 		}).animate({
 			'top':e.clientY, 
 			'left':e.clientX
-
-
-		})
+		}).fadeOut()
 	});
 }
 
@@ -42,4 +40,5 @@ $(document).ready(function(){
 
 	animateBlimp();
 	shootLasers();
+
 });

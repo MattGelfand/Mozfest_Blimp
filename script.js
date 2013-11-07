@@ -27,23 +27,19 @@ function shootLasers(){
 			'display': 'block',
 			'top': move[0],
 			'left':move[1]
-		});
+		}).animate({
+			'top':e.clientY, 
+			'left':e.clientX
+
+
+		})
 	});
 }
 
 
 $(document).ready(function(){
 
-	// $('body').click(function(e){
-	// 	$('.fire').css({
-	// 		'display': 'block',
-	// 		'top': e.clientY + 20,
-	// 		'left': e.clientX - 60
-	// 	}).animate({
-	// 		'top': e.clientY + 150,
-	// 		'left': e.clientY - 100
-	// 	}).fadeOut('fast');
-	// });
+
 	animateBlimp();
 	shootLasers();
 });

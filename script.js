@@ -22,11 +22,14 @@ function animateBlimp(){
 }
 
 function shootLasers(){
+	
+	var blimpPosition = $('.blimp').position();
+	console.log(blimpPosition);
 	$('body').click(function(e){
 		$('.fire').css({
 			'display': 'block',
-			'top': move[0],
-			'left':move[1]
+			'top':blimpPosition.top,
+			'left':blimpPosition.left
 		}).animate({
 			'top':e.clientY, 
 			'left':e.clientX

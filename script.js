@@ -18,25 +18,32 @@ function animateBlimp(){
 		left: move[1]
 		}, 3000, function(){
 			animateBlimp();
-		});
-	}
+	});
+}
 
-$(document).ready(function(){
-// $('body').mousemove(function(e){
-// $('.blimp').css({
-//	'top': e.clientY - 20,
-//	'left': e.clientX - 20});
-// });
-
+function shootLasers(){
 	$('body').click(function(e){
 		$('.fire').css({
 			'display': 'block',
-			'top': e.clientY + 20,
-			'left': e.clientX - 60
-		}).animate({
-			'top': e.clientY + 150,
-			'left': e.clientY - 100
-		}).fadeOut('fast');
+			'top': move[0],
+			'left':move[1]
+		});
 	});
+}
+
+
+$(document).ready(function(){
+
+	// $('body').click(function(e){
+	// 	$('.fire').css({
+	// 		'display': 'block',
+	// 		'top': e.clientY + 20,
+	// 		'left': e.clientX - 60
+	// 	}).animate({
+	// 		'top': e.clientY + 150,
+	// 		'left': e.clientY - 100
+	// 	}).fadeOut('fast');
+	// });
 	animateBlimp();
+	shootLasers();
 });

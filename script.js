@@ -21,27 +21,23 @@ function animateBlimp(){
 	});
 }
 
+var blimpPosition;
 function shootLasers(){
-	
-	var blimpPosition = $('.blimp').position();
-	console.log(blimpPosition);
+	blimpPosition = $('.blimp').position();
+}
+
+$(document).ready(function(){
+	animateBlimp();
 	$('body').click(function(e){
-		$('.fire').css({
-			'display': 'block',
+		shootLasers();
+		$('.laser').css({
+			'display': 'inline',
 			'top':blimpPosition.top,
 			'left':blimpPosition.left
 		}).animate({
-			'top':e.clientY, 
+			'top':e.clientY,
 			'left':e.clientX
-		}).fadeOut()
+		}).fadeOut();
 	});
-}
-
-
-$(document).ready(function(){
-
-
-	animateBlimp();
-	shootLasers();
 
 });

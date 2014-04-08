@@ -1,0 +1,510 @@
+---
+- Activity: Document Created
+  Created: Jan 26, 2014
+  User: You
+- Activity: Version 1 Saved
+  Content: 
+  Created: Jan 26, 2014
+  User: You
+- Activity: Version 2 Saved
+  Content: 
+  Created: Jan 30, 2014
+  User: You
+- Activity: Version 3 Saved
+  Content: 
+  Created: Jan 30, 2014
+  User: You
+- Activity: Daniel Spector joined the document
+  Created: Jan 30, 2014
+  User: Daniel Spector
+- Activity: Joe Kendall joined the document
+  Created: Jan 30, 2014
+  User: Joe Kendall
+- Activity: Patrick Johnson joined the document
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! "There are also a few sources out there to add 'subl' or 'sublime' as
+    the command \n\nhttp://www.sublimetext.com/docs/2/osx_command_line.html\n\nhttps://gist.github.com/olivierlacan/1195304\n\n\nAnd
+    for Sublime Text 3\nhttp://stackoverflow.com/questions/16199581/sublime-text-3-subl-command"
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! "I love the emphasis you give important parts of the text. I don't want
+    to sound like a turd at all but while reading (granted I'm reading with a finer
+    eye since you asked me to review) I found that some seem inconsistent. Bold is
+    used for Pro tips and syntax it seems while italic are being used as stylized
+    text, editorial emphasis, and then for directional text, telling people what they
+    should or shouldn't do. \n\nOverall, I didn't find it created a text that was
+    difficult to read, just something I caught when I was looking with a really fine
+    eye. "
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! "After thinking about this section, it made sense. The location is 'origin'
+    and you're pushing the 'master' code (since there aren't any other branches. \n\nAt
+    first I was confused, I was referring to the location as the origin. And the code
+    we are pushing as master. \n\nGranted I read this on the train so I was probably
+    all tired and still a fuzzy but maybe hash this out a little more? "
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: Just showing another example of where the text styling feels a little inconsistent.
+    Seems like bolded are typically for syntax, not for style emphasis.
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: Thank you for teaching me something! While I was/am proud of my commit
+    styles I totally love the background and thinking on this style. Looks like I'm
+    updating my commit style!
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Matthew Beale joined the document
+  Created: Jan 30, 2014
+  User: Matthew Beale
+- Activity: Discussion Comment
+  Content: ! 'Awesome - I know style here can be contentious, but I''m glad this made
+    sense to you : )'
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: Good call, you are definitely right, I need to take a pass over these pieces
+    and make them consistent.
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: ! '> "At first I was confused, I was referring to the location as the origin.
+    And the code we are pushing as master."
+
+
+    --- this is correct, maybe you weren''t so confused?'
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: Good catch, will try to make this more consistent for the next revision.
+    Thank you!
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: Yeah, I settled on `sub` because it's shorter and easier to type - the
+    default is `subl`, but why not save a character where you can. Think this is worth
+    justifying explicitly here?
+  Created: Jan 30, 2014
+  User: You
+- Activity: Bruno Germansderfer joined the document
+  Created: Jan 30, 2014
+  User: Bruno Germansderfer
+- Activity: Matt Gelfand joined the document
+  Created: Jan 30, 2014
+  User: Matt Gelfand
+- Activity: Discussion Comment
+  Content: ! "Well, IMO, I think it depends on the audience. If this is for existing
+    web devs, just early in their career I think it *might* be worth mentioning this
+    is a preference in terms of aliases and that others exist? \n\nI think you make
+    it clear that this isn't a hard and fast, but when I first set this up I thought
+    'subl' was all I could use. Then I realized if I just changed the word 'subl'
+    at the end of the symlink to whatever I want then it could be whatever I wanted. "
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! "But master is also a location too, right? \n\nEX - master branch and
+    'pbj' branch? I think that is what through me off. "
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! 'Not exactly - master is a branch. I mean, technically you could say
+    it points to a branch which contains code, which could be interpreted as a location,
+    but it''s very different from origin, which is a pointer to a _different repo_.
+    The command is saying take the code in the master branch on my local repo, and
+    push it to this remote github repo which I''m calling `origin`.
+
+
+    I guess this is what I was trying to say when I put down _what_ to push and _where_
+    to push here -- master is what you are pushing and origin is where to.'
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: ! "That makes a ton of sense. When I read thru your initial response I
+    re-read that section, it made sense to me then. \n\nI'd say you're good here unless
+    you see that it causes some comprehension problems with other editors. \n\nI'm
+    learning a lot from this too man. Thanks for including me :)"
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! 'Fantastic introduction. I myself was a little unclear on how this work
+    exactly. #n00bmoment'
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! 'Style remark: While I know you mentioned briefly above that we''ll assume
+    the reader went ahead and added someone to the repo, would it be worthwhile to
+    give this a quick little sub-head. To prevent any potential confusion from lazy
+    readers who may have skimmed?'
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! 'Thanks! Glad this piece made sense. It definitely can be confusing at
+    first. More discussion on making good pull requests to come in unfinished sections
+    below : )'
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: ! 'Could be useful to give a screenshot of what that error might be? When
+    I was learning about this I found that being aware of what error I might get made
+    me feel more confident while trying to fix that error. '
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: Good call, will do. I also want to have an example repo along with this
+    you can follow with that will simulate these sort of events, hopefully that will
+    help too.
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: Great call, will definitely add this. Thanks!
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: ! "This sentence read a bit clunky. My Aunt (editor/author) once taught
+    me that any sentence with the word 'that' can often go without (I know, I used
+    the word 'that' in the sentence!). There is sometimes an exception, and in those
+    cases, the word 'that' should never appear twice in a sentence. \n\nCould rewrite
+    as:\n\nSo the files with 'TODO' next to them are files with conflicts"
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! 'Love this section. Maybe possible to have a **TIPS** or **BENEFITS**
+    in each section where applicable? You make great points here about opportunities
+    to increase ''hire-ability'', extending git to other, non-code, things, etc. Freaking
+    awesome. '
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: Yeah definitely, thats a good idea. I have to explore particular uses outside
+    of code a little more, then perhaps expand this section with a couple pro tips
+    or a link to an extra section or something.
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: +1, good catch
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: ! "Correct me if I'm wrong, but I believe there is a command you can use
+    that will create the brand AND put you on it? \n\n'git checkout -b <branch-name>'\n\nThat
+    may be too advanced for this section though. "
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: You talk about it in the pro-tip! Nevermind!
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! 'Could one use this command if they have a .bash_profile file and no
+    .profile file?
+
+
+    Also, will calling a command on a nonexistent .profile file create one? And if
+    it does, what then happens to .bash_profile?
+
+
+    Not sure if that is necessarily relevant to include in this book, but figured
+    I''d ask anyways. '
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ! "Love this so far man. \n\nReally detailed and well written. Super conversational
+    and I could only imagine if I were practicing while reading, I'd express the same
+    'sweet' sentiments you do in your writing. \n\nIs this going to be an e-book?
+    Or just one big git repo :)\n\nI'll keep checking back on progress assuming you'd
+    like me to keep reviewing! Thanks for including me"
+  Created: Jan 30, 2014
+  User: Patrick Johnson
+- Activity: Discussion Comment
+  Content: ': )'
+  Created: Jan 30, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: ! 'Not really sure how to distribute. I feel like I should charge at least
+    a couple dollars for it since this is taking a lot of time. Ideally I''d like
+    to distribute it for kindle, pdf, and as a website with some sort of access code
+    to key in.
+
+
+    Thanks so much for the review, it''s been really helpful!'
+  Created: Jan 30, 2014
+  User: You
+- Activity: Josh Rowley joined the document
+  Created: Jan 30, 2014
+  User: Josh Rowley
+- Activity: Discussion Comment
+  Content: ! 'Yeah so this is something I have struggled with a little. I''ve been
+    working on a little configuration tool that might make this process a little easier
+    here: https://github.com/jenius/config/tree/v2 -- hoping to have this or at least
+    some scripts in place for users to more easily get through the profile config'
+  Created: Jan 30, 2014
+  User: You
+- Activity: Andrew Glassett joined the document
+  Created: Jan 30, 2014
+  User: Andrew Glassett
+- Activity: Kevin Pruett joined the document
+  Created: Jan 30, 2014
+  User: Kevin Pruett
+- Activity: Carl Sed joined the document
+  Created: Jan 30, 2014
+  User: Carl Sed
+- Activity: Henry Dickson joined the document
+  Created: Jan 31, 2014
+  User: Henry Dickson
+- Activity: Activity Comment
+  Content: ! 'i would like to propose another topic to cover: using git tags and managing
+    release versions via Github'
+  Created: Jan 31, 2014
+  User: Kevin Pruett
+- Activity: Activity Comment
+  Content: Ah great call @pruett, I’ll add this as a new section on the bottom
+  Created: Jan 31, 2014
+  User: You
+- Activity: Version 4 Saved
+  Content: 
+  Created: Jan 31, 2014
+  User: You
+- Activity: Kathryn Farwell joined the document
+  Created: Jan 31, 2014
+  User: Kathryn Farwell
+- Activity: Discussion Comment
+  Content: ! 'For beginners, it might be more helpful to the reader if you took a
+    step back and defined the two ways to interact with git/github (command line for
+    GUI).
+
+
+    I think you''re working under the assumption that these are familiar concepts,
+    but a to a new developer, it''s a bit foreign. '
+  Created: Jan 31, 2014
+  User: Kathryn Farwell
+- Activity: Discussion Comment
+  Content: Great call, will definitely do this. Thanks!
+  Created: Jan 31, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: ! 'I love this analogy '
+  Created: Jan 31, 2014
+  User: Kathryn Farwell
+- Activity: Discussion Comment
+  Content: ! 'You should call these out as special pro-tips or something, rather than
+    having them buried in the paragraph. '
+  Created: Jan 31, 2014
+  User: Kathryn Farwell
+- Activity: jordan stephens joined the document
+  Created: Jan 31, 2014
+  User: jordan stephens
+- Activity: Discussion Comment
+  Content: Does this look better?
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: ': )'
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: I think this piece as actually important enough to be a mandatory part
+    of the text. Without tab completion, you will be severely cripped and proably
+    make many more mistakes. I've tried to keep the pro tips to only things that you
+    *could* skip and still survive
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  1, 2014
+  User: You
+- Activity: Version 5 Saved
+  Content: 
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: That should do it!
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: Ok, so I've gone through and made some changes such that bold text represents
+    either important new vocab or pieces that are essential to read and not miss,
+    where italic is editorial emphasis. Let me know if you find any particular spots
+    where tis is confusing!
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  1, 2014
+  User: You
+- Activity: Version 6 Saved
+  Content: 
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: Sorry, I must have been out of it before. What exactly do you mean by 'sub-head'?
+    Re-reading this now, it seems clear, with instructions immediately above on how
+    to add a collaborator...
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  1, 2014
+  User: You
+- Activity: Version 7 Saved
+  Content: 
+  Created: Feb  1, 2014
+  User: You
+- Activity: Version 8 Saved
+  Content: 
+  Created: Feb  1, 2014
+  User: You
+- Activity: Version 9 Saved
+  Content: 
+  Created: Feb  1, 2014
+  User: You
+- Activity: Version 10 Saved
+  Content: 
+  Created: Feb  1, 2014
+  User: You
+- Activity: Version 11 Saved
+  Content: 
+  Created: Feb  1, 2014
+  User: You
+- Activity: Version 12 Saved
+  Content: 
+  Created: Feb  1, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  2, 2014
+  User: Daniel Spector
+- Activity: Discussion Comment
+  Content: ! 'Jeff,
+
+
+    First off I have to say that this is fantastic. Clear, easy to read and really
+    entertaining.
+
+
+    I have a couple of comments simply from the perspective of a beginner who might
+    not be so familiar with the command line/git.
+
+
+    I like to think about ".." as going back a folder rather than as a parent directory.
+    New users might confuse this with the home directory. I think it would be clearer
+    to say something to the effect that entering ` ` ` cd .. ` ` ` lets you go back
+    up the folder structure and obviously you won''t be able to go back anymore if
+    you''re at the top.
+
+
+    Let me know what you think.'
+  Created: Feb  2, 2014
+  User: Daniel Spector
+- Activity: Discussion Comment
+  Content: If I was a new developer I may not know what Vim is or why you're referring
+    to it here. You may want to add a quick line describing vim as a text editor found
+    on almost all OSX/Linux computers that you can you to edit any file/document.
+  Created: Feb  2, 2014
+  User: Daniel Spector
+- Activity: Discussion Comment
+  Content: Sorry to be nitpicky here but isn't it a great idea to use Github as a
+    backup for your code and a way of showing your work even if you're not collaborating?
+    Again, simply looking at it from the perspective of someone who might not have
+    as much familiarity with programming (as I was a short time ago).
+  Created: Feb  2, 2014
+  User: Daniel Spector
+- Activity: Discussion Comment
+  Content: This blew my mind. Never thought to use Git in other contexts. Thanks for
+    this!
+  Created: Feb  2, 2014
+  User: Daniel Spector
+- Activity: Discussion Comment
+  Content: I have this as ~/.bash_profile. Might want to add a note so no one panics
+    when they can't find it :)
+  Created: Feb  2, 2014
+  User: Daniel Spector
+- Activity: Discussion Comment
+  Content: Great tip, so much easier to read.
+  Created: Feb  2, 2014
+  User: Daniel Spector
+- Activity: Discussion Comment
+  Content: Thank you, and great call. I'll make that change now -- new perspectives
+    always help, that's why I'm so grateful for my reviewers!
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  2, 2014
+  User: You
+- Activity: Version 13 Saved
+  Content: 
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: Thanks! More nice little tips like this to come. There are so many for
+    git particularly.
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: Great catch, added it below in the pro tip -- thanks!
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: You're totally right, changed the wording to make more sense.
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: Ah thanks! Second reviewer that has commented on how much they enjoyed
+    this section. Perhaps it's something that could use even more expansion!
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Closed
+  Created: Feb  2, 2014
+  User: You
+- Activity: Version 14 Saved
+  Content: 
+  Created: Feb  2, 2014
+  User: You
+- Activity: Version 15 Saved
+  Content: 
+  Created: Feb  2, 2014
+  User: You
+- Activity: Discussion Comment
+  Content: are at, but there
+  Created: Feb  3, 2014
+  User: Joe Kendall
+- Activity: Discussion Comment
+  Content: ! 'useful; but more
+
+
+    Starting sentences with ''But'' is not as frowned upon as it once was, however
+    if possible, it’s best not to as it connects better with the previous statement
+    you are comparing against. IMHO. :p'
+  Created: Feb  3, 2014
+  User: Joe Kendall
+- Activity: Version 16 Saved
+  Content: 
+  Created: Feb  3, 2014
+  User: You

@@ -1,0 +1,401 @@
+Git is a fantastic way to work and collaborate on code projects. It ensures that none of your work is ever lost unless you put in an enormous amount of concerted effort, provides you with tools you can use to branch off and experiment, and through github allows you to easily collaborate and work with other developers.
+
+Although it may take a bit of time to get used to as a beginner, if you can get a solid handle on how to use git, it will help vastly if you are being helped and/or having your code reviewed by a developer/mentor.
+
+### Command Line Basics
+
+I am well aware that there are a number of GUI apps out there that you can use to interact with git/github, but I would **strongly recommend** using the command line instead. Familiarity with command line basics is an essential as a developer anyway, and while you will grow out of GUI git clients, working with git from the command line will grow with you. If you are more interested in using a GUI to interact with git, don’t bother reading on, as the rest of this guide is heavily command-line centric.
+
+Navigating the file system via command line is like trying to find your way around a pitch black cave network, with your only help being a small magical gremlin that will answer your questions and lead you to other rooms if you ask in the right way. At the beginning, for those who are used to navigating their cave systems with the help of a torch, this can be incredibly frustrating. In addition, the gremlin is picky about how you ask him things, so that can be annoying as well. However, as you learn and grow your relationship with the gremlin and learn more of his spells, you will find that it is actually more efficient in the end than your former torch-bearing ways.
+
+Magical gremlins and caves out of the way, let’s jump right into it. First, go to the spotlight icon in the top right corner of your screen and type in “terminal”, then hit enter.
+
+![screenshot](http://cl.ly/TdyI/Screen%20Shot%202014-01-30%20at%2012.38.24%20AM.png)
+
+This should open up a basic-looking white window with some text about your computer on it. Congratulations, you are in the first cave and can now type to your gremlin. The first thing you want to ask is where the F you are. You can find this out by asking for the **p**resent **w**orking **d**irectory, or the **pwd** for short. I’ll be showing each command in full as an example periodically throughout this section. You will also see a dollar sign before each one - this dollar sign represents our prompt, which by default probably is something like your name and a computer name. We will represent this prompt in an abstract way using the dollar sign. _Do not, I repeat, do not actually put the dollar sign into your commands!_ You command is only what is after the dollar sign.
+
+```
+$ pwd
+```
+
+It should return something like `/Users/yourname`. This is what folder you are in. Good stuff. The default is what’s called your “home folder”, because a lot of the stuff associated with your account on this computer is in it. The next thing you might want to see is what else is in the folder you’re in. You can find this out by asking for a _short list_, or **ls** of things in the folder.
+
+```
+$ ls
+```
+
+You should see a number of great things you are familiar with, like your Documents, your Desktop, etc. Good stuff. The desktop is something you know you can see visually, so let’s go there to start our work. We can change directories using the **cd** command, followed by the name of the directory you want to change to.
+
+```
+$ cd Desktop
+``` 
+
+Now, this is where the gremlin gets picky. If you typed `desktop` without a capital “D”, it would not work. This is because that’s not the name of the directory, the directory has a capital D in the name. Picky gremlin. But luckily, while picky, the gremlin is quite smart, and we can actually get him to figure out where we want to go based on the first letter or two. This is called “autocompleting”, and is done using the tab key. Try this — first run `cd` without any folder name to go back to your home directory, then type `cd Des`, then hit tab. Woah, magic - it completed the rest of the word! You could even go down to just `cd De`. But try `cd D`, and it won’t complete the first shot. Ah well, that’s because there are other folders that start with a D, so it can’t be sure. But if you hit tab again, it will actually show you the options you have filtered down to, which is pretty useful. After filling in the second letter, you’re good to go.
+
+Now try typing `cd des` and hit tab. See what happens - no completion. Hit tab a second time — no options. This means your path was just wrong, so it’s time to try running `ls` again to see the folders and get the name right. The moral of the story here is to **always, always use tab to complete a directory name when you are changing directories**. Not only is it faster, it also makes sure that you have the name right.
+
+One last thing to cover here. We now know how to move down through directories, but not how to move back *up*. If you are in a directory and want to go back up a level, you can use one of the two magical objects in every folder: `..` Yes, that’s two dots. Try it:
+
+```
+$ cd ..
+```
+
+Now if you type `pwd`, you’ll notice that you are back up in the parent directory of wherever you started. Sweet. So what this means is that `..` is equal to the parent directory, and it can be found in every directory (except the absolute root of the computer). Now in case you are interested, I did say earlier that there are two magical objects in every folder, and `..`, while two dots, is only one object. The second one is just `.`, and it represents the current folder. This might not seem super useful. For example, `cd`ing to `.` will just bring you to the place you already are at. But there are some other good uses for it we’ll see later. As a quick example for now, you can use the `open` command to open up a folder in the finder, like this:
+
+```
+$ open .
+```
+
+This command will open the current folder in the Finder, which actually can be quite useful. But more on the dots later on.
+
+Let’s get back on track with git — now switch back to your desktop and let’s get started with our project. If you find yourself being confused trying to figure out which directory you are in, _re-read this section and practice moving around through different directories_. It only takes a couple commands and a small bit of practice to get a handle on figuring out how to move into a folder from the command line, but I have seen people get hung up for hours on git and have the problem end up being that they were not in the right directory. **Always be confident of where you are**, and if you aren’t, practice a little more.
+
+### Setting Up Your Project
+
+So by now you have figured out how to move around to folders from the command line, and this is awesome. Jump on to your desktop, right click on your actual desktop, and make a new folder — we’ll call it `example`. Now from your command line `cd` into example. If you run `ls`, you’ll see no results — the folder is empty. Makes sense. If you want to get advanced, you can run `ls -la` and it will show you the normally hidden `.` and `..` objects we were talking about before. Pretty neat. So the first step is to make some files for our project. While you can create files and folders from the command line, let’s just do it with our text editor for now.
+
+&gt; **Pro Tip:** If you are interested in quickly creating directories and files from the command line, you can use the `mkdir` and `touch` commands, respectively. To more easily remember, think of `mkdir` as “make directory”, and `touch` as “use the [divine hand of god](http://en.wikipedia.org/wiki/File:Creaci%C3%B3n_de_Ad%C3%A1m.jpg) to create something from nothing”. You’d run these commands with one argument, the name of whatever you want to create. For example, `mkdir example` or `touch index.html`.
+
+I’m going to use [Sublime Text](http://www.sublimetext.com/) as an example in this tutorial, but if you prefer a different text editor, feel free to try to follow with it instead. Assuming Sublime is in your dock, grab the `example` folder off your desktop and drag it onto the Sublime icon. This should pop open a window for your project. Hit `⌘ + N` to create a new file, and let’s save it as `index.html` in the `example` folder. Awesome, now you have a file in your project. To verify, run `ls` from the command line again and you should see `index.html` appear. If you want, add a simple `&lt;p&gt;hello world&lt;/p&gt;` to the file and save it. Now that we have a (simple) project, we’re ready to get started with git.
+
+&gt; **Pro Tip:** Wouldn’t it be great if you could type a command to open the current folder you are in on the command line in sublime text? Good news — there is, you just need to set it up. Run the following command to link it: `ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sub`. Now you have a command called `sub` that you can pass a folder name to open in sublime text. If you remember, `.` is the current folder, so running `sub .` would open the current folder in sublime text. Sweet! { TODO: video tutorial }
+
+### Git Basics
+
+Git operates through the command line, so switch back from your editor and let’s get ready to learn some new commands. Before getting started, you’ll want to make sure you have actually [installed git](http://git-scm.org), and if you hadn’t before, pop open a new tab in your terminal once it’s done as a refresh (⌘ + T). Now, to initialize a new git project in your folder (again, make sure you are in the right folder), you can run:
+
+```
+$ git init
+```
+
+Sweet. You should see some output confirming that git has been initialized. Now first let’s look at the first and most essential git command:
+
+```
+$ git status
+```
+
+Much like you have tools such ls `ls` and `pwd` to figure out where you are in the filesystem on the command line, you have `git status` to figure out what’s going on with git. Once you have run this command, you should see that you have one untracked file, which is `index.html`, as expected.
+
+&gt; **Pro Tip:** For a cleaner and more concise output on the `git status` command, run it with these additional options: `git status -sb`. I use git status so often that I have created a [bash alias](http://tldp.org/LDP/abs/html/aliases.html) for just the letter `s` that expands out to `git status -sb`. The way to do this depends heavily on how your computer has been configured, so this might not work if you have tinkered with the command line before, but try running these commands to add this shortcut if you want: `echo -e “\nalias s=‘git status -sb’ &gt;&gt; ~/.profile &amp;&amp; source ~/.profile”.
+
+I’m sure you can guess the next step — make sure git _is_ tracking that file. To do this, we use the following command:
+
+```
+$ git add index.html
+```
+
+Nothing too wild here. Now if you run `git status` again, it should tell you that `index.html` is being tracked and is ready to be committed, excellent. I suppose the next question is what exactly _is_ a commit?
+
+{ TODO: video tutorial }
+
+### Your First Commit
+
+Now that I have built up the suspense with that headline up above there, let’s get to the answer: a commit is a snapshot of your project, with a message attached. To put this in context, let’s think about the way we traditionally save things. You might have a document in MS Word for example, and you are writing. Every once and a while, you stop writing for a minute when you feel like you have made some progress and you save, to make sure your work isn’t lost. If something goes horribly wrong, you can always not save and go back to the last saved version where you know things are good, right?
+
+Now take that to the next level. Imagine every time you save, it’s recorded in a timeline, and at any moment you can revert back to any of your saved states. That would be a cool ability to have. Then on top of that, imagine that every time you save, it asked what you did since the last save. This way, when looking through your history, you would be able literally to see your process. In addition, it would keep track of who made the changes. So if you were having your essay edited by a friend, it would show exactly what changes your friend made _and_ that it was your friend that made them.
+
+This is helpful for a few reasons. First, it’s easy for someone else to come in and see how your process went. Second, you can delete anything any time. No copy-pasting, no commenting-out, no alternate documents. If you don’t need it, **just get rid of it**. If you find yourself needing it again later, you can always go back and grab it since you have a clearly annotated history. And finally, it’s excellent for collaboration. You can work with other people on a project and see exactly what kind of changes they are making and where they are making them.
+
+With the theory out of the way, let’s make our commit:
+
+```
+$ git commit -m “initial commit”
+```
+
+All this is doing is committing with a message. You must **always commit with a message**, which means you always want to use the `-m` piece. If you leave it off, it will drop you into vim to write your message, which is not where you want to be.
+
+&gt; **Pro Tip:** If you find yourself in vim, by accident or otherwise, _do not panic_, and more importantly _do not button mash_. Vim has a very strange syntax and mode of operation especially for a beginner and if you hit _anything on the keyboard_, it will probably have an unwanted consequence. If vim comes up, type `:q!` then hit return and vim will exit. If you did panic and hit other buttons, mash the `esc` key a few times, then type `:q!` and hit enter. If that still didn’t work, close out the terminal, open a new window, `cd` back into your directory and try again — lesson learned! { TODO: video tutorial }
+
+Great! We made our first commit. We can verify that the commit was made using another git command to add to our toolbelt:
+
+```
+$ git log
+```
+
+This will show a log of all the commits that have been made. You should see your initial commit right there - awesome. To exit the git log, just press `q`.
+
+&gt; **Pro Tip:** The default version of git log doesn’t look very good. But if you add a bunch of options, you can make it look great. Definitely a terminal-full, but try running this command: `git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative` - you should see a nice clean colored log. Like with `git status`, I have this aliased to `glog`, for git log. Makes it a lot quicker. { TODO: video tutorial }
+
+So now that we’ve made a commit, it’s just about that time to ship some code. Let’s get this project up on [github](https://github.com)!
+
+### Shipping Code
+
+So let’s talk about repositories. A **repository** is the term for a project that’s using git. So while it may sound fancy, it just means a folder with files in it that use git as version control. So you have a repository on your computer now which you just pushed one commit to — we’ll refer to this as your **local** repository, because it’s on your computer only. Github offers you the chance to make a **remote** copy of your repository so that other people can check it out and collaborate. But don’t forget that your local repository and the version you push to github are still different — you need to keep them in sync.
+
+First, let’s create an empty repository on github so we can sync it with our local one. Hit up http://github.com and make an account. Now, in the top right corner, hit the “+” button and select “new repository”. Give it a name (like example) and hit create _without selecting any additional options_. This means _do not follow any of their cues to add a read me_, although I know the big shiny buttons can be tempting. Github now gives you some instructions on how to get started. Let’s actually take a look at these instructions and break them down.
+
+```
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/jenius/example.git
+git push -u origin master
+```
+
+These actually are all commands that we are familiar with, save for the last two. As we learned in a pro tip above, `touch` creates a new file, we know `git init` initializes git for a directory, we know `git add` adds the file to be tracked, we already made our commit. Now you’ll notice that it also has instructions for pushing an existing repository, which really is our situation:
+
+```
+git remote add origin https://github.com/jenius/example.git
+git push -u origin master
+```
+
+…and you’ll see here that this is just the last two commands from the instruction set above. So let’s go over what exactly these are doing. Starting with this first command, base `git remote` it is followed by three arguments: `add`, `origin`, and a url. In order, this is telling git what to do remotely (you can add a new remote repository, remove one, list them, etc), the second argument is the name of the remote repository, and the third is where exactly to find it.
+
+You might think that “origin” is something of a special word here, but it is actually just a normal name — you could name your remote link to github anything you want. Using the word “origin” to refer to the primary remote repository is simply a convention when using git. If you’d like to test using another name (like github), feel free, but I would recommend sticking with “origin” just to get used to the convention.
+
+Now on to the second command. `git push` is pretty clear — we want to push our code somewhere. Ignore the `-u` for now, you can omit it if you want, not important. The second piece, `origin master`, is important though. You’ll recognize `origin` as the name of your remote github repo, so you could probably figure out that this first command tells git _where_ to push the code. But what’s `master`?
+
+This delves into the concept of branches, which we will discuss later. As a quick summary, a branch is a separate copy of your project that you can mess with and it doesn’t interfere with any other branch. For example, if you wanted to add some experimental javascript, you could create a new branch to put your javascript on. If it was looking good, you could merge that branch back into your main branch. If not, you could get rid of it. If that’s not super clear, _don’t worry_ — we’ll go over branches in detail later. What’s important is that you understand that you can have multiple copies of your project to test things out in. `master` is the **main copy of the project**. It’s actually the name of a branch — the default branch. You already are on that branch, and don’t have to worry about it. So by specifying `origin` and `master` to the `git push` command you are telling git **where to push** and **what code to push**, respectively.
+
+Ok, so let’s run those two commands. After completing, head back to github in your browser and refresh that page — you should see that your repo has now been populated with your `index.html` file — whoo! If you click the file, you’ll see the contents just as you wrote them. This code is now public, and anyone can access it and work with you on it. And we will be discussing working with other people in depth a little later.
+
+&gt; **Pro Tip**: If you are still wondering about the `-u` option, what it does is set the default upstream, which essentially means that in the future if you just run `git push` without specifying where or what to push, it will assume `origin master`. If you don’t use the `-u`, a default upstream will not be set, and if you run `git push` it will give you an error, asking for more details. More on upstreams later though.
+
+### Pushing More Code
+
+So we just made our first commit to git and also released our first open source code. This is awesome! Why stop here — let’s keep pushing code. We can continue with the same cycle to make and push another commit. Let’s break down the process:
+
+- Make some changes to your project
+- Run `git status` to see what changes you made
+- Use `git add .` to stage your changes for commit
+- Run `git status` again to make sure the changes were staged
+- Use `git commit -m “a message”` to make a commit
+- Run `git status` to confirm that the commit has been made
+- Push our code to github using `git push origin master`
+
+{ TODO: video tutorial }
+
+Now, you may think that the git status stuff is overboard, but **it is important to get into the habit of using git status frequently when working with git**. This is because, as is the case with most things on the command line, the interface does not present the state of thing to you, you must ask it for state. You can compare this directly to moving between folders as discussed earlier, where you can’t _see_ where you are, but you can ask the gremlin with `ls` or `pwd`. When dealing with git, it’s the same way — you just ask git what the deal is. If you followed the pro tip above and aliased `git status` to simply `s`, this makes checking your status very quick and easy, and is a great way to make sure that nothing went wrong.
+
+So take some time now to make some changes to your project, commit, and push them. Then do it again. Practice this for a bit. Start to build up a little website, and get into the rhythm. Whenever you have finished a significant feature, stop and make a commit, then push it. But don’t forget to keep reading too, because there’s plenty more to learn!
+
+### Commit Style
+
+There are plenty of opinions out there on how to write and structure your commits, and you can and should read about them, try them out, and see if they make sense to you. What I will recommend here is the result of a lot of research and a lot of time working with git, both on personal projects and with other developers, and I’m definitely opinionated and think it’s the best way to do it. But keep in mind that if you are working with people who prefer a different style, you can and should try to find a middle ground.
+
+First, the **tense** of your commit messages. I would recommend using present imperative tense. For a couple examples:
+
+- “fix bug in css”
+- “refactor about page javascript”
+- “add legal terms”
+
+Why? The [documentation for git itself](http://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages) states that present imperative tense is preferred, and when git and/or github auto-generates commit messages, they will be in present imperative tense. In addition, this tense carries as little weight as possible — it is entirely neutral. It doesn’t say that something happened in the past, will happen in the future, or is currently happening. It simply states that it happens. How to interpret this is up to the reader.
+
+You might see other people use other tenses such as “fixes bug in css” or “fixed bug in css”. If you are working on a project someone else is leading and they are consistent with the tense they use, be respectful and stick with their tense. Otherwise, I would get used to present imperative.
+
+Second, the **breakdown of the commit**. A commit message actually has two parts: a summary and details. What you are writing in the `-m “…”` section is just the summary - a short overview, no more than 50 characters, of what the commit does. Any further details should go in the details section. To add to the details section, you’ll either need to use vim or a GUI such as gitx to write the commit. Vim is the recommended way to do it, see the pro tip below for more details if you are interested. If not, just remember to make your commit summaries concise high level summaries of what you have done. If you find yourself writing a novel, perhaps you should be splitting into multiple commits rather than one. Tim Pope has an absolutely fantastic article on how to write good commit messages that [you can read here](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) for more details.
+
+&gt; **Pro Tip:** Using vim can be a good way to write commit messages once you are used to it. To use vim for a commit message, just run `git commit` without the `-m`. Vim has a very strange way of working. By default, you are in what’s called “command mode”, which is for editing, not inserting text. This means that the keys on the keyboard do various text manipulations, so when you type, nothing will show up, you will just be cranking through commands and going into other modes. So the first thing you’ll want to do is hit the `i` key to enter insert mode. From here, it works more or less as a normal text editor. Your summary goes on the first line, and if you want to add commit details, just return and put them on the next line. When finished, hit `esc`, then type `:wq` and hit enter. These commands return you to command mode, then save (w - for ‘write’) and quit (q) out of vim. If you hit some wrong keys and things have gone downhill, as noted in an earlier pro tip, just mash escape then hit `:q!` and enter and you should be out of trouble. You may need to redo the commit, but it’s better than restarting your terminal! { TODO: video tutorial }
+
+Finally, let’s go over **the purpose of `git add`**. You might think that it seems silly for you to need to run `git add` every time instead of just `git commit` handling all your files, but `git add` actually has a specific and very useful purpose — rather than running `git add .` every time, you can pick out specific files you want to stage for a commit, which allows you to break down your changes into multiple commits. For example, if you refactored your css and also changed around a bit of html, you might want to split those into different commits for clarity. To do this, you could just run `git add style.css`, followed by a commit, then add the rest using `git add index.html` or just `git add .` and finish it out with a second commit.
+
+Now that we are cranking out commits with style and grace, let’s move on to working with github and collaborating with others!
+
+### Collaboration
+
+There’s no reason to use github if you aren’t collaborating with other people on your code! Github knows this, and they have built a top-of-the-line toolkit for collaborating with code into their platform.
+
+An important thing to remember about git is that you are often working with _multiple repositories_ that you want to keep in sync. For example, when you created and pushed your code to github, you were synchronizing the github repository with your local one — although they often hold the same code, they are two different repositories, stored in two different places. If you make another commit, it’s _not going to show up on github by default_, and if someone else pushed code to the github repository, it won’t show up on your computer. You are in control of how and when you keep things in sync.
+
+So let’s say that you have a friend contributing to your project. Nobody is allowed to make changes to your code unless you specifically allow it (can you imagine if anyone could change any of your code by default?). There are two ways for other people to contribute to your code on github. First, they could **fork** your project making a copy of it under their own name, make changes, push to their own version then make a **pull request**, asking you to pull _their_ changes into _your_ project. We’ll talk more about forking and pull requests later. The second way is to give someone access to push code to your repository. Let’s assume this is a trusted friend and you’d like to give them access to make changes to your code, because you are working together, and move ahead with this approach for now.
+
+&gt; **Pro Tip**: If you are following along and doing this in real life, you can go to “Settings” &gt; “Collaborators” in your repo, and add your friend by typing in their github username. TODO: add screenshot
+
+Now let’s say you’ve made your commit and your friend is now making some changes to the project and pushes them. At the same time, you made some changes, and you try to push your changes after your friend’s. This is what could end up as an ugly situation — you don’t want anyone’s code to be overwritten. For situations like this, git has to **merge** the two sets of changes together. Now, it could be an easy merge, if, for example you added a line to `index.html` and your friend added a new file called `style.css`. The changes don’t conflict, and can be merged together seamlessly. On the other hand, if your friend had added a new line to `index.html` that’s different from your line, this could be a little more ugly. Git can’t figure out which one to use (or whether to use both) — that’s something that only you can make the call on. This latter situation is what’s referred to as a **merge conflict**, and we’ll go into more detail about these in a minute.
+
+What’s important to know here is that in order to progress, you need to **pull** your friend’s changes down from github into your local repository and allow git to merge them, bringing you up to sync, before you can push your new changes. If you try to push to a repo that someone else has modified, git will give you an error message telling you that you need to pull first. This is ok — if you see this, do not panic, just follow the instructions (pull first before pushing). We saw how to push the master branch to origin (github) using `git push origin master`, can you guess how to pull?
+
+```
+$ git pull origin master
+```
+
+…that was a tough one, I know. Pull the master branch down from the origin. Sweet. When you do this, git will find any new commits and try to merge them with yours. As long as you didn’t change the exact same line of code to something different than someone else changed it to, the merge will happen automatically, and you’ll be able to push your changes seamlessly. If that did happen, as mentioned above, we have a merge conflict on our hands.
+
+&gt; **Pro Tip:** Ok, quiz question. When your friend pushes changes to your repo, _why exactly_ do you have to pull before pushing your own changes? Think about it - read back if you must. Got it? Ok, here’s the answer. Whenever changes are pushed from two different places, it’s possible that they could have changed the exact same thing. In this case, git would not know which set of changes to keep — only you can decide that. Therefore, you have to pull changes and git needs to merge into your local repo, because just in case there’s a merge conflict, you need to be able to solve it. And speaking of merge conflicts…
+
+### Merge Conflicts
+
+Unfortunate as they are, merge conflicts do happen. And when they do, they throw down a very ugly error message, and put your project in somewhat of a purgatory state until you have resolved it. But really, resolving these conflicts is not so bad, so let’s walk through it.
+
+First thing I usually do when a merge conflict comes up is clear out the gigantic ugly merge conflict message. It’s very frightening, really. It might look something like this:
+
+```
+Auto-merging index.html
+# CONFLICT (content): Merge conflict in index.html
+# Automatic merge failed; fix conflicts and then commit the result.
+```
+
+There are cleaner ways we can look at this. I clear my console compulsively with `⌘ + K` — you can also type `clear` and hit enter to clear things out. Or if you just want to keep the message there, that’s also cool. Next thing, run `git status` to see what the story is. You’ll probably see something like this:
+
+```
+# On branch master
+# You have unmerged paths.
+#   (fix conflicts and run "git commit")
+# 
+# Unmerged paths:
+#   (use "git add ..." to mark resolution)
+# 
+# both modified:      index.html
+# 
+# no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+So the files with `TODO` next to them are files that there is a conflict in. In your text editor, jump into a conflicted file, and let’s check it out. In the example I’m giving here,  there was a change made in the `index.html` file to the same line. Looking in that file, we see something like this:
+
+```
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;p&gt;here’s some updated text from me&lt;/p&gt;
+=======
+&lt;p&gt;here’s some updated text from someone else&lt;/p&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 4ai234jn
+```
+
+As you can see, git has injected some markup where the conflict is. It has it split into two sections, the first one marked as `HEAD` and the second one marked with a seemingly random number. This number is what’s called a **commit hash** - a unique identifier for a commit. Think of it as a commit id number. If you run `git log`, you’ll see a list of commits you’ve made along with their hashes. So, what is git trying to tell you here?
+
+`HEAD` in git is a way of saying “the most recent commit that you made in your current branch”. So in this context, `HEAD` means _your latest local commit_. The commit hash then must mean your friend’s change, and that number must be pointing to their commit. Fair enough. Looking at the text inside these blocks quickly verifies our claim.
+
+So this is actually quite a nice way to do things. Git has found where exactly the conflict is and divided it into two sections, one indicating what we have locally and the other pointing to a commit that someone else made. Now, just decide how you actually want the file to look, remove the extra markup git has added, and we’re good to go. Back on the command line, resume your normal flow — add the files you want to commit (usually all with `git add .`) and make your commit, in this case usually something like “resolve merge conflict on index page”. Congrats, you just took care of your first merge conflict!
+
+This should be enough information to work quite seamlessly with other people on a project using git. Pretty great, huh? There is plenty more to read if you are comfortable with what you have so far and are hungry for more advanced techniques, but if you are just trying to get off the ground, this should be sufficient. Now make sure you didn’t waste your time reading and practicing and actually use git! There are tons of benefits:
+
+- If you are working on code, companies can check out your code and see what your style is and your learning progress. They will also note how great you are at using git, and how you have clean, clear commit messages and are great at working with other people.
+- If you are working on anything else (excel spreadsheet, text document, photoshop documents), you should still use git. It is still a great way to keep track of your history and progress, and collaborate with others. Git is a lot better at managing text files than other types of files, but that’s no reason not to try with other types!
+- If you are working on code, you will almost certainly need to know git if you are looking for any type of work on code. Having this skill solidly in your tool belt will be extremely helpful.
+
+Practice practice practice! And if you’re ready for more, read on and we’ll make a deep dive into git’s more advanced functionality.
+
+### Branches
+
+We’ve heard about branches before, and we know that the default branch is called **master**, which if you recall is also what you push to github. But let’s take some time here to go over what exactly a branch is, and how to use branches effectively when using git.
+
+A branch is essentially a **duplicate of your project** that you can mess with, and changes _do not affect the original version_. Imagine if you are writing a word document, and you decide that you might actually want to entirely rewrite one of the sections of whatever you are working on. You might keep the original section and start another version below it, or make a second copy of your document and start rewriting the section. This way you don’t lose your original, in case you want to refer back to it, or in case the rewrite doesn’t really go well and you’d rather scrap it. This is the purpose of a branch in git. And when writing code, doing this sort of experimentation is even more frequent, so branches can be extremely useful.
+
+I like to use branches to work on **features**, as do [many others](http://nvie.com/posts/a-successful-git-branching-model/), so we’re going to use a feature as an example for this section. Let’s say that in our basic website we’re working on, we want to add an about page. For this feature, we’re going to make a branch.
+
+```
+$ git branch about-page
+```
+
+This command is pretty straightforward, and probably doesn’t need much explanation. However, one potentially confusing piece is that although this command has _created_ the branch, we are not actually _on_ the branch. Much like how you can create and navigate through folders on the command line using `cd` and `mkdir`, we create and navigate through branches in git using `git branch` and `git checkout`. So now that we have created a new branch called `about-page`, let’s go to that branch.
+
+```
+$ git checkout about-page
+```
+
+This is fairly easy to remember — for me, I think, “hey let’s go check out this branch and see what’s going on there”. While we’re at it here, let’s introduce one more command that can be used to see all your available branches:
+
+```
+$ git branch
+```
+
+…yep, that’s right. `branch` with no arguments will just show a list of all your branches. It will also show a star next to the branch you are currently on, which is nice. For me, this is a lot like `ls` when navigating folders — it lets you see your options. You’ll probably see something like this for the output:
+
+```
+  master
+* about-page
+```
+
+Indicating that you have two branches, `master` and `about-page`, which you just made and checked out, and you are now on as indicated by the star. Sweet.
+
+&gt; **Pro Tip:** For a little more efficiency, you can actually create a branch and check it out in one command. Try `git checkout -b some-branch`. The addition of the `b` flag (in unix, a letter or word prefixed with one or two dashes as part of a command is called a “flag”) means “check out this branch, but create it first”.
+
+So what git does between branches is kind of crazy and can be disorienting at first. It actually saves the entire state of your project, all the files that exist, and what’s in them. It will then exactly bring back the state of the project in each branch when you switch to it. So for example, if you wanted to delete `index.html`, you could delete it in a branch. It would appear that the file is gone from your file system. But as soon as you switch back to `master` (with `git checkout master`), the file would come back with all it’s content, seemingly out of nowhere. But really, it’s coming out of git’s magic storage.
+
+At first, it might be frightening to delete files and text without having a duplicate or backup version, but you’ll get used to it quickly. It’s actually quite a luxury of using git — when you want to get rid of something or make a sweeping set of changes, make a branch, then _just delete it fearlessly_. Git has your back, and if you want it back you can always get it. I can’t even describe the number of times I would see large blocks of commented out code, or 5 copies of the same photoshop file with `final1` and `final2` etc. at the end before using git. But now that you have been enlightened, no more messy filesystem, and no more wasted space (git actually only stores the minimal set of changes to transform one file into another (called a _diff_), rather than a duplicate of the entire thing — it’s quite efficient internally). Now you can let git sweep up your mess and leave you with a nice clean snapshot of exactly what you’re working with, being confident that it has everything stored between your branches and your history if you need to get it back.
+
+So let’s put our theory to the test. Now that you are on the `about-page` branch, create a new file called `about.html`, add some content to it, then stage and commit the file. Now try this:
+
+```
+$ git checkout master
+```
+
+…and watch `about.html` disappear from your project. Crazy! Now use `git checkout about-page` to move back to your branch, and watch the file pop back in. Note that before you change branches, you should make sure that you have committed any changes that you made to files, so check with a quick `git status` first!
+
+&gt; **Pro Tip:** When we were talking about navigating the file system, one of the pro tips taught us how to make our bash prompt show which folder we are currently in. This is really useful for knowing generally where you are at a glance. We can do the same thing for git branches, showing the git branch in the command prompt, which is really nice for knowing which branch you are on at any given time. It take a bit more work than the folder modification, but let’s walk through it. First, we’ll need to download a [small git extension](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) that allows this functionality and add this to our bash profile. If you haven’t messed with your profile before, and if you added the `s` alias previously and this worked, you can open up `~/.profile` with sublime and add it. Use `sub ~/.profile` to open it up, then add the line `source ~/.git-prompt.sh` (TODO: this needs a short video tutorial)
+
+&gt; **Pro Tip:** Two pro tips in one! This one is closely related though. Another super useful feature in filesystem navigation was the ability to _tab complete_ a directory. It both allows us to skip a lot of extra typing, and verify we have the correct name. We can also add [tab completion for git branches](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash). (TODO: this needs a short video tutorial) 
+
+### Merging Your Branch
+
+Ok, so when working with a branch, there are three possible outcomes: you either will _like all the changes_ and want to merge them all back into your main branch, you will _not like the changes_ and want to get rid of the branch, or you will _like some of the changes_ but not all, and just want to pull some specific commits back into your main branch. We will go over how to handle each of those outcomes here, in order.
+
+First, let’s say your about page branch is looking great, and you’re ready to merge it back into your master branch. First use `git checkout master` to switch back to your master branch, then run the following:
+
+```
+$ git merge about-page
+```
+
+Again, fairly self-explanatory command. You’re telling git “merge the branch I tell you into the branch I’m on”. Now, note that if you have been actively working on _both branches_  in parallel, and made changes to the same parts of a file, you could end up with a **merge conflict**, since git would not be sure which version you wanted to keep, but let’s assume that you didn’t do that for now (if you did, hold off until we get to the merge conflict section below, and run `git reset —hard HEAD` to undo the merge). Now, you should see the `about.html` file pop in to your branch, and all will be well. If you check your `git log` you’ll see the commits you made in the `about-page` branch moved over into your master branch. Very nice!
+
+Alternately, you may have botched the `about-page` branch, and you just want to scrap it. First `git checkout master` to move back to your master branch, then run
+
+```
+$ git branch -D about-page
+```
+
+…to delete the branch. Make sure you really want to get rid of all the changes though! If you think you might potentially want to keep it around for later, you can switch back to master and/or move into another branch and abandon the `about-page` branch without consequence.
+
+Finally, you might want to just move some pieces of your branch over, but not the whole thing. For example, let’s say you made three commits — in the first two, you created the about page and added a basic paragraph to it, and in the third you added some more code, but it ended up looking whack so you didn’t want it — just the first two commits. There are a few ways to handle this. First, we can just get rid of the third commit, then merge the branch. Let’t take a moment to think about what sort of command we could use to do this — see if you can guess it. We’d need to tell git we want to remove or revert the commit, and give it a pointer to which commit we are talking about. Stop reading now, think about it, and take a guess. Write it down somewhere. Still stuck? Remember we talked about commit hashes earlier in the merge conflicts section. Ok — let’s look at the answer:
+
+```
+git revert 5h2342b
+```
+
+Yup, that last number is a **commit hash** - a unique number we can use to refer to a specific commit. The one here is just a random number I typed out, so it won’t do anything if you run it — you’ll need to get your own commit hash from the `git log`. This will make another commit reverting the changes. If you check the `git log` again after, you’ll see another commit named `TODO: add commit title` that un-does all the changes you made. You might wonder how to actually delete the commit — git does not like deleting things, so it takes a little more advanced tools to do this. We’ll learn how later, but for now, it’s not important. Now you can run the merge as above.
+
+Alternately, we can **cherry pick** only the commits we want. Git’s `cherry-pick` command is a great tool for moving single commits from one branch to another. You’ll need to get familiar with `git log` if you want to use cherry pick — it will be even more useful if you followed the pro tip above in the “Your First Commit” section (TODO: link to this) and created an alias for `glog`. Either way, let’s try cherry-picking from one branch to another. In your `about-page` branch, let’s say that you have the same three commits we just talked about, but this time you just want to pull the last commit in to your master branch and abandon the rest of the about-page branch. First, on the about-page branch, run `git log` (or `glog`) and grab the _commit hash_ of the commit you want. You can just select it and copy it to your clipboard. Now jump back into your master branch  (`git checkout master`), and let’s get to work:
+
+```
+$ git cherry-pick COMMIT_HASH
+```
+…obviously replacing the `COMMIT_HASH` with the actual hash you copied. If all went well, you’ll see upon checking your logs that the commit was pulled in successfully.
+
+Note that as is the case with any type of merge, it is possible to encounter a merge conflict when cherry-picking. Cherry pick merge conflicts are a little more difficult to resolve, and work much the same was as rebase conflicts, which will be discussed in a later chapter, so we’ll come back to this later. For now, if you run into a conflict and end up in a weird purgatory state, you can run `git cherry-pick —abort` to call it off.
+
+### Using tig
+
+There is a wonderful tool called `tig` (yes, that’s ‘git’ backwards) that you can use to get a little more insight into your git logs on the command line. I would recommend installing it through [homebrew](http://brew.sh/) using `brew install tig`. Once you have it, you can just run `tig` in any folder that is has had git initialized, and you will enter into tig’s interface.
+
+…this section still in progress
+
+### Github Best Practices
+- readme file (and what to put in it)
+- markdown overview (github guide)
+- .editorconfig
+- .gitignore
+- contributing.md
+- licensing your project
+
+### Making Pull Requests
+- forking and pulling
+- pulling from a branch
+- reviewing PRs
+- merging PRs
+
+### A Quick Overview of Vim
+- getting into and out of insert mode
+- save and quit
+- what happens if you mess up :wq at the end
+- delete line
+- dd and p
+- x
+- e and b
+
+### Rewriting History With Rebase
+- rebase -i
+- commit hash or HEAD~N
+- deleting commits
+- rearranging commits
+- rewording commits
+- squashing commits
+- fixing up commits
+- pushing rebased code
+- rebase merge conflicts
+- working with empty commits
+
+### Rebase Flow with Github
+- rebase when working with others
+- git pull —rebase
+- rebasing to catch one branch up to another (before PR merge)
+- rebasing to squash commits down in a PR before merge

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>testing page!</title>
+    <style>
+      body { font-family: Lato, sans-serif; -webkit-font-smoothing: antialiased; }
+      h1 { text-align: center; margin-bottom: 40px; }
+      #boxes { padding: 0; width: 800px; margin: 50px auto; list-style: none; }
+      #boxes li { float: left; width: 150px; height: 150px; background: #ccc; margin: 5px; }
+      #boxes .selected { background: yellow; }
+      .hidden { display: none; }
+      #events { width: 600px; height: 180px; margin: 30px auto;}
+      .button { -webkit-transition: all .3s ease; padding: 10px 0; border-radius: 4px; background-color: #00a6fc; color: #fff; cursor: pointer; font-weight: 700; text-align: center; width: 130px; margin: 0 auto; }
+      .ball { width: 50px; height: 50px; border-radius: 999px; background: red; margin: 30px auto; }
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+
+  </head>
+
+  <body>
+
+    <h1>jQuery Events</h1>
+
+    <div id='events'>
+      <div class='button'>click me</div>
+      <div class='ball'></div>
+    </div>
+
+    <ul id='boxes'>
+      <li></li>
+      <li class='special'></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src='main.js'></script>
+  </body>
+
+</html>

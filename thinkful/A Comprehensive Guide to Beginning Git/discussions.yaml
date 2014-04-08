@@ -1,0 +1,387 @@
+---
+- Topic text: _do not panic_
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 08:40:06 -0500'
+    Text: ! "I love the emphasis you give important parts of the text. I don't want
+      to sound like a turd at all but while reading (granted I'm reading with a finer
+      eye since you asked me to review) I found that some seem inconsistent. Bold
+      is used for Pro tips and syntax it seems while italic are being used as stylized
+      text, editorial emphasis, and then for directional text, telling people what
+      they should or shouldn't do. \n\nOverall, I didn't find it created a text that
+      was difficult to read, just something I caught when I was looking with a really
+      fine eye. "
+  - Author: Jeff Escalante
+    Created: '2014-01-30 10:03:20 -0500'
+    Text: Good catch, will try to make this more consistent for the next revision.
+      Thank you!
+  - Author: Jeff Escalante
+    Created: '2014-02-01 17:25:31 -0500'
+    Text: Ok, so I've gone through and made some changes such that bold text represents
+      either important new vocab or pieces that are essential to read and not miss,
+      where italic is editorial emphasis. Let me know if you find any particular spots
+      where tis is confusing!
+- Topic text: ! '*it is important to get into the habit of using git status frequently
+    when working with git**'
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 08:51:04 -0500'
+    Text: Just showing another example of where the text styling feels a little inconsistent.
+      Seems like bolded are typically for syntax, not for style emphasis.
+  - Author: Jeff Escalante
+    Created: '2014-01-30 10:01:31 -0500'
+    Text: Good call, you are definitely right, I need to take a pass over these pieces
+      and make them consistent.
+- Topic text: ! 'First, the **tense** of your commit messages. I would recommend using
+    present imperative tense. For a couple examples:
+
+
+    - “fix bug in css”
+
+    - “refactor about page javascript”
+
+    - “add legal terms”'
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 08:52:07 -0500'
+    Text: Thank you for teaching me something! While I was/am proud of my commit styles
+      I totally love the background and thinking on this style. Looks like I'm updating
+      my commit style!
+  - Author: Jeff Escalante
+    Created: '2014-01-30 10:00:59 -0500'
+    Text: ! 'Awesome - I know style here can be contentious, but I''m glad this made
+      sense to you : )'
+- Topic text: ! 'So the files with `TODO` next to them are files that there is a conflict
+    in. '
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 13:03:18 -0500'
+    Text: ! "This sentence read a bit clunky. My Aunt (editor/author) once taught
+      me that any sentence with the word 'that' can often go without (I know, I used
+      the word 'that' in the sentence!). There is sometimes an exception, and in those
+      cases, the word 'that' should never appear twice in a sentence. \n\nCould rewrite
+      as:\n\nSo the files with 'TODO' next to them are files with conflicts"
+  - Author: Jeff Escalante
+    Created: '2014-01-30 13:10:00 -0500'
+    Text: +1, good catch
+- Topic text: …this section still in progress
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 13:30:36 -0500'
+    Text: ! "Love this so far man. \n\nReally detailed and well written. Super conversational
+      and I could only imagine if I were practicing while reading, I'd express the
+      same 'sweet' sentiments you do in your writing. \n\nIs this going to be an e-book?
+      Or just one big git repo :)\n\nI'll keep checking back on progress assuming
+      you'd like me to keep reviewing! Thanks for including me"
+  - Author: Jeff Escalante
+    Created: '2014-01-30 14:31:40 -0500'
+    Text: ! 'Not really sure how to distribute. I feel like I should charge at least
+      a couple dollars for it since this is taking a lot of time. Ideally I''d like
+      to distribute it for kindle, pdf, and as a website with some sort of access
+      code to key in.
+
+
+      Thanks so much for the review, it''s been really helpful!'
+- Topic text: ! '> **Pro Tip:** '
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 08:36:41 -0500'
+    Text: ! "There are also a few sources out there to add 'subl' or 'sublime' as
+      the command \n\nhttp://www.sublimetext.com/docs/2/osx_command_line.html\n\nhttps://gist.github.com/olivierlacan/1195304\n\n\nAnd
+      for Sublime Text 3\nhttp://stackoverflow.com/questions/16199581/sublime-text-3-subl-command"
+  - Author: Jeff Escalante
+    Created: '2014-01-30 10:04:19 -0500'
+    Text: Yeah, I settled on `sub` because it's shorter and easier to type - the default
+      is `subl`, but why not save a character where you can. Think this is worth justifying
+      explicitly here?
+  - Author: Patrick Johnson
+    Created: '2014-01-30 12:42:03 -0500'
+    Text: ! "Well, IMO, I think it depends on the audience. If this is for existing
+      web devs, just early in their career I think it *might* be worth mentioning
+      this is a preference in terms of aliases and that others exist? \n\nI think
+      you make it clear that this isn't a hard and fast, but when I first set this
+      up I thought 'subl' was all I could use. Then I realized if I just changed the
+      word 'subl' at the end of the symlink to whatever I want then it could be whatever
+      I wanted. "
+  - Author: Jeff Escalante
+    Created: '2014-02-01 17:19:17 -0500'
+    Text: That should do it!
+- Topic text: So by specifying `origin` and `master` to the `git push` command you
+    are telling git **where to push** and **what code to push**, respectively.
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 08:45:50 -0500'
+    Text: ! "After thinking about this section, it made sense. The location is 'origin'
+      and you're pushing the 'master' code (since there aren't any other branches.
+      \n\nAt first I was confused, I was referring to the location as the origin.
+      And the code we are pushing as master. \n\nGranted I read this on the train
+      so I was probably all tired and still a fuzzy but maybe hash this out a little
+      more? "
+  - Author: Jeff Escalante
+    Created: '2014-01-30 10:02:51 -0500'
+    Text: ! '> "At first I was confused, I was referring to the location as the origin.
+      And the code we are pushing as master."
+
+
+      --- this is correct, maybe you weren''t so confused?'
+  - Author: Patrick Johnson
+    Created: '2014-01-30 12:43:15 -0500'
+    Text: ! "But master is also a location too, right? \n\nEX - master branch and
+      'pbj' branch? I think that is what through me off. "
+  - Author: Jeff Escalante
+    Created: '2014-01-30 12:45:55 -0500'
+    Text: ! 'Not exactly - master is a branch. I mean, technically you could say it
+      points to a branch which contains code, which could be interpreted as a location,
+      but it''s very different from origin, which is a pointer to a _different repo_.
+      The command is saying take the code in the master branch on my local repo, and
+      push it to this remote github repo which I''m calling `origin`.
+
+
+      I guess this is what I was trying to say when I put down _what_ to push and
+      _where_ to push here -- master is what you are pushing and origin is where to.'
+  - Author: Patrick Johnson
+    Created: '2014-01-30 12:49:45 -0500'
+    Text: ! "That makes a ton of sense. When I read thru your initial response I re-read
+      that section, it made sense to me then. \n\nI'd say you're good here unless
+      you see that it causes some comprehension problems with other editors. \n\nI'm
+      learning a lot from this too man. Thanks for including me :)"
+- Topic text: First, they could **fork** your project making a copy of it under their
+    own name, make changes, push to their own version then make a **pull request**,
+    asking you to pull _their_ changes into _your_ project.
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 12:53:54 -0500'
+    Text: ! 'Fantastic introduction. I myself was a little unclear on how this work
+      exactly. #n00bmoment'
+  - Author: Jeff Escalante
+    Created: '2014-01-30 12:57:20 -0500'
+    Text: ! 'Thanks! Glad this piece made sense. It definitely can be confusing at
+      first. More discussion on making good pull requests to come in unfinished sections
+      below : )'
+- Topic text: ! '`~/.profile` with sublime and add it'
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 13:23:14 -0500'
+    Text: ! 'Could one use this command if they have a .bash_profile file and no .profile
+      file?
+
+
+      Also, will calling a command on a nonexistent .profile file create one? And
+      if it does, what then happens to .bash_profile?
+
+
+      Not sure if that is necessarily relevant to include in this book, but figured
+      I''d ask anyways. '
+  - Author: Jeff Escalante
+    Created: '2014-01-30 14:33:14 -0500'
+    Text: ! 'Yeah so this is something I have struggled with a little. I''ve been
+      working on a little configuration tool that might make this process a little
+      easier here: https://github.com/jenius/config/tree/v2 -- hoping to have this
+      or at least some scripts in place for users to more easily get through the profile
+      config'
+- Topic text: Now let’s say you’ve made your commit and your friend is now making
+    some changes to the project and pushes them.
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 12:55:29 -0500'
+    Text: ! 'Style remark: While I know you mentioned briefly above that we''ll assume
+      the reader went ahead and added someone to the repo, would it be worthwhile
+      to give this a quick little sub-head. To prevent any potential confusion from
+      lazy readers who may have skimmed?'
+  - Author: Jeff Escalante
+    Created: '2014-01-30 12:58:21 -0500'
+    Text: Good call, will do. I also want to have an example repo along with this
+      you can follow with that will simulate these sort of events, hopefully that
+      will help too.
+  - Author: Jeff Escalante
+    Created: '2014-02-01 17:42:48 -0500'
+    Text: Sorry, I must have been out of it before. What exactly do you mean by 'sub-head'?
+      Re-reading this now, it seems clear, with instructions immediately above on
+      how to add a collaborator...
+- Topic text: ! 'If you try to push to a repo that someone else has modified, git
+    will give you an error message telling you that you need to pull first. '
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 12:57:31 -0500'
+    Text: ! 'Could be useful to give a screenshot of what that error might be? When
+      I was learning about this I found that being aware of what error I might get
+      made me feel more confident while trying to fix that error. '
+  - Author: Jeff Escalante
+    Created: '2014-01-30 12:58:53 -0500'
+    Text: Great call, will definitely add this. Thanks!
+- Topic text: So now that we have created a new branch called `about-page`, let’s
+    go to that branch.
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 13:17:32 -0500'
+    Text: ! "Correct me if I'm wrong, but I believe there is a command you can use
+      that will create the brand AND put you on it? \n\n'git checkout -b <branch-name>'\n\nThat
+      may be too advanced for this section though. "
+  - Author: Patrick Johnson
+    Created: '2014-01-30 13:18:04 -0500'
+    Text: You talk about it in the pro-tip! Nevermind!
+  - Author: Jeff Escalante
+    Created: '2014-01-30 14:22:54 -0500'
+    Text: ': )'
+- Topic text: GUI apps
+  Comments:
+  - Author: Kathryn Farwell
+    Created: '2014-01-31 11:53:33 -0500'
+    Text: ! 'For beginners, it might be more helpful to the reader if you took a step
+      back and defined the two ways to interact with git/github (command line for
+      GUI).
+
+
+      I think you''re working under the assumption that these are familiar concepts,
+      but a to a new developer, it''s a bit foreign. '
+  - Author: Jeff Escalante
+    Created: '2014-01-31 11:56:37 -0500'
+    Text: Great call, will definitely do this. Thanks!
+  - Author: Jeff Escalante
+    Created: '2014-02-01 17:05:50 -0500'
+    Text: Does this look better?
+- Topic text: So what this means is that `..` is equal to the parent directory, and
+    it can be found in every directory (except the absolute root of the computer).
+  Comments:
+  - Author: Daniel Spector
+    Created: '2014-02-02 10:23:36 -0500'
+    Text: ! 'Jeff,
+
+
+      First off I have to say that this is fantastic. Clear, easy to read and really
+      entertaining.
+
+
+      I have a couple of comments simply from the perspective of a beginner who might
+      not be so familiar with the command line/git.
+
+
+      I like to think about ".." as going back a folder rather than as a parent directory.
+      New users might confuse this with the home directory. I think it would be clearer
+      to say something to the effect that entering ` ` ` cd .. ` ` ` lets you go back
+      up the folder structure and obviously you won''t be able to go back anymore
+      if you''re at the top.
+
+
+      Let me know what you think.'
+  - Author: Jeff Escalante
+    Created: '2014-02-02 15:32:17 -0500'
+    Text: Thank you, and great call. I'll make that change now -- new perspectives
+      always help, that's why I'm so grateful for my reviewers!
+- Topic text: The default version of git log doesn’t look very good
+  Comments:
+  - Author: Daniel Spector
+    Created: '2014-02-02 10:44:32 -0500'
+    Text: Great tip, so much easier to read.
+  - Author: Jeff Escalante
+    Created: '2014-02-02 15:35:48 -0500'
+    Text: Thanks! More nice little tips like this to come. There are so many for git
+      particularly.
+- Topic text: ! 'like trying to find your way around a pitch black cave network, '
+  Comments:
+  - Author: Kathryn Farwell
+    Created: '2014-01-31 12:25:12 -0500'
+    Text: ! 'I love this analogy '
+  - Author: Jeff Escalante
+    Created: '2014-02-01 17:06:03 -0500'
+    Text: ': )'
+- Topic text: But luckily, while picky, the gremlin is quite smart, and we can actually
+    get him to figure out where we want to go based on the first letter or two.
+  Comments:
+  - Author: Kathryn Farwell
+    Created: '2014-01-31 14:30:31 -0500'
+    Text: ! 'You should call these out as special pro-tips or something, rather than
+      having them buried in the paragraph. '
+  - Author: Jeff Escalante
+    Created: '2014-02-01 17:07:49 -0500'
+    Text: I think this piece as actually important enough to be a mandatory part of
+      the text. Without tab completion, you will be severely cripped and proably make
+      many more mistakes. I've tried to keep the pro tips to only things that you
+      *could* skip and still survive
+- Topic text: Vim is the recommended way to do it,
+  Comments:
+  - Author: Daniel Spector
+    Created: '2014-02-02 10:28:09 -0500'
+    Text: If I was a new developer I may not know what Vim is or why you're referring
+      to it here. You may want to add a quick line describing vim as a text editor
+      found on almost all OSX/Linux computers that you can you to edit any file/document.
+  - Author: Jeff Escalante
+    Created: '2014-02-02 15:39:03 -0500'
+    Text: Great catch, added it below in the pro tip -- thanks!
+- Topic text: you can open up `~/.profile` with sublime and add it.
+  Comments:
+  - Author: Daniel Spector
+    Created: '2014-02-02 10:39:48 -0500'
+    Text: I have this as ~/.bash_profile. Might want to add a note so no one panics
+      when they can't find it :)
+- Topic text: There’s no reason to use github if you aren’t collaborating with other
+    people on your code!
+  Comments:
+  - Author: Daniel Spector
+    Created: '2014-02-02 10:30:14 -0500'
+    Text: Sorry to be nitpicky here but isn't it a great idea to use Github as a backup
+      for your code and a way of showing your work even if you're not collaborating?
+      Again, simply looking at it from the perspective of someone who might not have
+      as much familiarity with programming (as I was a short time ago).
+  - Author: Jeff Escalante
+    Created: '2014-02-02 15:41:30 -0500'
+    Text: You're totally right, changed the wording to make more sense.
+- Topic text: ! '- If you are working on anything else (excel spreadsheet, text document,
+    photoshop documents), you should still use git. It is still a great way to keep
+    track of your history and progress, and collaborate with others. Git is a lot
+    better at managing text files than other types of files, but that’s no reason
+    not to try with other types! Github has already introduced support for visual
+    diffs of [geographical data](https://github.com/blog/1528-there-s-a-map-for-that),
+    [3d renders](https://github.com/blog/1633-3d-file-diffs), [csv’s](https://help.github.com/articles/rendering-csv-and-tsv-data),
+    [images](https://github.com/blog/817-behold-image-view-modes), and are constantly
+    adding more.'
+  Comments:
+  - Author: Daniel Spector
+    Created: '2014-02-02 10:34:29 -0500'
+    Text: This blew my mind. Never thought to use Git in other contexts. Thanks for
+      this!
+  - Author: Jeff Escalante
+    Created: '2014-02-02 15:42:26 -0500'
+    Text: Ah thanks! Second reviewer that has commented on how much they enjoyed this
+      section. Perhaps it's something that could use even more expansion!
+- Topic text: ! '- If you are working on code, companies can check out your code and
+    see what your style is and your learning progress. They will also note how great
+    you are at using git, and how you have clean, clear commit messages and are great
+    at working with other people.
+
+    - If you are working on anything else (excel spreadsheet, text document, photoshop
+    documents), you should still use git. It is still a great way to keep track of
+    your history and progress, and collaborate with others. Git is a lot better at
+    managing text files than other types of files, but that’s no reason not to try
+    with other types!
+
+    - If you are working on code, you will almost certainly need to know git if you
+    are looking for any type of work on code. Having this skill solidly in your tool
+    belt will be extremely helpful.'
+  Comments:
+  - Author: Patrick Johnson
+    Created: '2014-01-30 13:07:10 -0500'
+    Text: ! 'Love this section. Maybe possible to have a **TIPS** or **BENEFITS**
+      in each section where applicable? You make great points here about opportunities
+      to increase ''hire-ability'', extending git to other, non-code, things, etc.
+      Freaking awesome. '
+  - Author: Jeff Escalante
+    Created: '2014-01-30 13:09:27 -0500'
+    Text: Yeah definitely, thats a good idea. I have to explore particular uses outside
+      of code a little more, then perhaps expand this section with a couple pro tips
+      or a link to an extra section or something.
+- Topic text: are at. But there
+  Comments:
+  - Author: Joe Kendall
+    Created: '2014-02-03 07:29:46 -0500'
+    Text: are at, but there
+- Topic text: useful. But more
+  Comments:
+  - Author: Joe Kendall
+    Created: '2014-02-03 07:33:27 -0500'
+    Text: ! 'useful; but more
+
+
+      Starting sentences with ''But'' is not as frowned upon as it once was, however
+      if possible, it’s best not to as it connects better with the previous statement
+      you are comparing against. IMHO. :p'

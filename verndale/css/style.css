@@ -1,0 +1,320 @@
+/*UNIVERSAL*/
+
+
+* {
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	font-smoothing: antialiased;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	color:#2a2a2a;
+  	overflow-x: hidden;
+  	width: 100%;
+  	background:url('../img/background.jpg') center center no-repeat;
+  	height: 1000px;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* NAVIGATION */
+
+
+nav h1 {
+	position: absolute;
+	top:-50px;
+	left:10px;
+	font-family: "bebas-neue";
+	font-size: 70px;
+	color:#e3e3e3;
+	letter-spacing: -2px;
+	cursor: pointer;
+}
+
+nav ul {
+	margin:0 0 0 300px;
+	padding:0;
+}
+
+nav li {
+	display: inline;
+	margin:0;
+	padding:0 10px 0 10px;
+	font-size: 25px;
+}
+
+nav li a {
+	color:white;
+	padding:5px;
+	margin:0;
+}
+
+nav li a:hover {
+	border-bottom:3px solid #B77004;
+	transition: .2s ease all;
+}
+
+nav {
+	background: black;
+	width: 100%;
+	padding:20px;
+	height: 30px;
+}
+
+.fa {
+	position: absolute;
+	top:10px;
+	right:10px;
+	color:white;
+	cursor: pointer;
+}
+
+/* IMAGES */
+
+
+/* MAIN STRUCTURE */
+
+#wrap {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.cats {
+	max-width: 1200px;
+	margin:0 auto;
+	overflow: hidden;
+	padding-top:3.2em;
+	padding-bottom:1.6em;
+	cursor: pointer;
+}
+
+.cat1 h2:hover, .cat2 h2:hover, .cat3 h2:hover, .cat4 h2:hover {
+	color:#B77004;
+	text-shadow: 1px 1px 1px #000, 3px 3px 5px black; 
+}
+
+.cat1 h2 {
+    position: absolute;
+    top:50px;
+    left:50px;
+    width: 30%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
+}
+
+
+.cat1 p {
+	font-family: 'bebas-neue';
+	margin-top:150px;
+
+}
+
+
+.cat2 h2 {
+    position: absolute;
+    top:50px;
+    right:50px;
+    width: 30%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
+}
+
+.cat3 h2 {
+    position: absolute;
+    bottom:-200px;
+    left:50px;
+    width: 30%;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 120px;
+    color:;
+    letter-spacing: 4px;
+}
+
+.cat4 h2 {
+    position: absolute;
+    bottom:-200px;
+    right:50px;
+    width: 30%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
+}
+
+.beans {
+	position: absolute;
+	left:-20px;
+	top:250px;
+	/*display: none;*/
+}
+
+.beans li {
+	float: left;
+	list-style-type: disc;
+	margin-left:40px;
+	font-family: 'bebas-neue';
+	font-size: 20px;
+}
+
+.beans li:first-child {
+	list-style-type: none;
+}
+
+
+/*TYPOGRAPHY*/
+
+
+
+
+/* FOOTER */
+
+footer {
+	width: 100%;
+	margin:0 auto;
+	clear:both;
+	margin:808px 0 0 0;
+}
+
+footer p {
+	color:black;
+	background:red;
+}
+
+.footer-wrap {
+	background:#fafafa;
+	margin:0 auto;
+	padding:100px;
+}
+
+footer h3 {
+	font-family: "garamond-premier-pro";
+	font-style: italic;
+	font-size: 20px;
+	display: inline;
+	padding: 10px;
+	color:black;
+	font-weight: 100;
+}
+
+footer li a {
+	color: white
+}
+
+
+
+
+
+
+/* DEPRECIATED CODE */
+
+/*
+#boxes {
+	max-width: 1200px;
+	margin:0 auto;
+	overflow: hidden;
+	padding-top:3.2em;
+	padding-bottom:1.6em;
+	display: none;
+
+
+}
+
+.box {
+	float: left;
+	width: 590px;
+	height: 400px;
+	-webkit-transition: all .1s ease-in-out;
+	-transition:all .1s ease-in-out;
+	cursor: pointer;
+	opacity: 1;
+  	background-color: #FFF;
+  	margin:5px;
+}
+
+.box:hover {
+  -webkit-box-shadow: 4px 10px 5px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 10px 5px -6px rgba(0,0,0,0.75);
+box-shadow: 4px 10px 5px -6px rgba(0,0,0,0.75);
+}
+
+.box.coffee {
+	background-image: url(/img/coffee-top-left.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+.box.menu {
+	background-image: url(/img/coffee-top-right.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.box.loyalty {
+	background-image: url(/img/coffee-bottom-left.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 30%;
+}
+
+
+.box.shop {
+	background-image: url(/img/coffee-bottom-middle.png);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 40%;
+}
+
+.box.mug {
+	background-image: url(/img/coffee-bottom-right.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 27.5%;
+}
+
+.box h1 {
+	text-align: center;
+	font-family: "bebas-neue";
+	font-size: 49px;
+	font-style: normal;
+    letter-spacing: 3px;
+    padding:0;
+    line-height: 5.5;
+    color: white;
+	text-shadow: 0px 2px 3px #666;
+          
+}
+
+.box.loyalty h1 {
+	color:#2a2a2a;
+}
+

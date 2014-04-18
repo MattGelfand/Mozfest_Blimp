@@ -4,13 +4,6 @@ $(document).ready(function () {
    $("img.bw").delay(600).animate({"opacity": "1"}, 900);
 });
 
-//Show Text on Toggle //
-
-  $(".box1").click(function(){
-    $(".boxes-inner").hide("slow"(function() {
-    $('.box1 p').show('slow');
-    });
-});
 
 // Header Animation //
 var didScroll;
@@ -51,18 +44,5 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
-
-        $('#circle1').addClass("hidden");
-
-        $('#circle1').click(function() {
-            var $this = $(this);
-
-            if ($this.hasClass("hidden")) {
-                $(this).removeClass("hidden").addClass("visible");
-
-            } else {
-                $(this).removeClass("visible").addClass("hidden");
-            }
-        });
 
 

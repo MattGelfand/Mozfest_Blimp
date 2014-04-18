@@ -1,0 +1,279 @@
+/* UNIVERSAL STYLES */
+
+* {
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	font-smoothing: antialiased;
+}
+
+body {
+	margin:0;
+	line-height: 1.5;
+	font-family: "freight-micro-pro";
+	background: #222;
+}
+
+p {
+	-webkit-hyphens:none;
+	-moz-hyphens:none;
+	-ms-hyphens:none;
+	-o-hyphens:none;
+	hyphens:none;
+	font-size: 45px;
+	font-style: normal;
+	font-weight:600;
+	letter-spacing: -1px;
+	position: relative;
+	left:50px;
+	padding-top:1.6em;
+	max-width: 780px;
+	color: rgba(0, 0, 0, 0.9);	
+}
+
+h3 {
+	color:#fafafa;
+	margin:-10px 0 0 0;
+	padding:0;
+	font-size: 25px;
+	font-weight: 300;
+}
+
+a {
+	text-decoration:none;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+img {
+	max-width: 100%;
+}
+
+ul {
+	margin:0;
+	padding:0;
+}
+
+/* MAIN CONTENT */
+
+#wrap-top {
+	padding:0 40px;
+	margin:0 auto;
+	position: relative;
+}
+#wrap-top h1 {
+	font-size: 70px;
+	font-style: normal;
+	font-weight: 300;
+	color:#fafafa;
+	margin:0;
+	padding:0;
+}
+
+.h3, .h3 a {
+	color:#f6833e;
+	font-weight: bolder;
+}
+
+#wrap-bottom {
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image:url('../img/glasses.jpg');
+    transition:.7s ease all;
+    padding-bottom:400px;
+}
+
+#wrap-bottom.scrolled {
+	background-image: url('../img/glasses.jpg');
+	webkit-transition:.7s ease all;
+	-moz-transition:.7s ease all;
+	-o-transition:.7s ease all;
+	-ms-transition:.7s ease all;
+	transition:.7s ease all;
+
+}
+
+#wrap-bottom.scrolled2 {
+	background-image: url('../img/medill.jpg');
+	-webkit-transition:.7s ease all;
+	-moz-transition:.7s ease all;
+	-o-transition:.7s ease all;
+	-ms-transition:.7s ease all;
+	transition:.7s ease all;
+}
+
+#wrap-bottom.scrolled3 {
+	background-image: url('../img/nbn-home.jpg');
+	webkit-transition:.7s ease all;
+	-moz-transition:.7s ease all;
+	-o-transition:.7s ease all;
+	-ms-transition:.7s ease all;
+	transition:.7s ease all;
+}
+
+#wrap-bottom.scrolled4 {
+	background-image: url('../img/backstory.jpg');
+	webkit-transition:.7s ease all;
+	-moz-transition:.7s ease all;
+	-o-transition:.7s ease all;
+	-ms-transition:.7s ease all;
+	transition:.7s ease all;
+}
+
+#wrap-bottom.scrolled5 {
+	background-image: url('../img/circus.jpg');
+	webkit-transition:.7s ease all;
+	-moz-transition:.7s ease all;
+	-o-transition:.7s ease all;
+	-ms-transition:.7s ease all;
+	transition:.7s ease all;
+}
+
+#wrap-bottom.scrolled6 {
+	background-image: url('../img/beer.jpg');
+	webkit-transition:.7s ease all;
+	-moz-transition:.7s ease all;
+	-o-transition:.7s ease all;
+	-ms-transition:.7s ease all;
+	transition:.7s ease all;
+}
+
+.hidden-images {
+	display: none;
+	width: 1px;
+	height: 1px;
+}
+
+blockquote {
+	font-size: 45px;
+	font-style: normal;
+	font-weight: 400;
+	color:#fafafa;
+	border-left: 10px solid #ccc;
+	margin: 1.5em 0;
+	padding: 0.5em 25px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+	color: #f6833e;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.10em;
+	vertical-align: -0.4em;
+}
+
+blockquote p {
+	display: inline;
+}
+
+.one {
+	-webkit-transition:.4s ease all;
+	-moz-transition:.4s ease all;
+	-ms-transition:.4s ease all;
+	-o-transition:.4s ease all;
+	transition:.4s ease all;
+}
+
+.plea {
+	padding: 4em 0 8em 0;
+	max-width: 1124px;
+}
+
+.plea p {
+	margin:0 auto;
+	color:#fff;
+	padding:0;
+	text-align: center;
+	font-weight: 400;
+}
+
+/* NAVIGATION */
+
+
+.circles {
+	position: fixed;
+	right:-185px;
+	top:240px;
+}
+
+.circles li {
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+
+.circles img {
+	margin:-10px;
+	width: 25%;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+
+	html, body { overflow-x:hidden; }
+
+	p {
+		font-size: 1.5em;
+		margin:0 auto;
+		padding:1.6em;
+		left:-3em;
+		width: 70%;
+	}
+
+	#wrap-bottom {
+		padding-bottom:0;
+		background-position: 25%;
+	}
+
+	#wrap-top h1 { 
+		font-size: 3em; 
+		margin:0; 
+	}
+
+	blockquote {
+		width: 100%;
+		font-size: 1em;
+		margin:0 auto;
+		border-left:none;
+		padding:1.6em 0;
+	}
+}
+
+
+@media only screen and (max-width: 480px) {
+	
+	html, body { overflow-x:hidden; }
+
+	p {
+		font-size: 1.5em;
+		padding:1.6em;
+		position: static;
+		width: 80%;
+	}
+
+	#wrap-top h1 { font-size: 2em; }
+
+	#wrap-bottom { 
+		padding-bottom:0; 
+		background-position: 50%; 
+	}
+
+	.circles { display: none; }
+
+	h3, blockquote {
+		width: 100%;
+		font-size: 1em;
+		margin:0 auto;
+	}
+
+	blockquote {
+		border-left:none;
+		margin:0;
+		padding:.8em 0;
+	}
+}

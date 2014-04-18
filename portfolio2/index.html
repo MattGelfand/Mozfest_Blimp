@@ -9,8 +9,8 @@
 <link href="css/hover-min.css" rel="stylesheet" media="all">
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<script type="text/javascript" src="//use.typekit.net/oyg1ukm.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script src="//use.typekit.net/oyg1ukm.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 
 </head>
 
@@ -21,6 +21,7 @@
       <nav>
         <ul>
           <li><a href="#home" class="smoothScroll">Home</a></li>
+          <li><a href="#boxes" class="smoothScroll">Work</a></li>
           <li><a href="#bio" class="smoothScroll">Bio</a></li>
           <li><a href="#contact_me" class="smoothScroll">Contact</a></li>
         </ul>
@@ -35,68 +36,61 @@
     </div>
 
 
-    <div class="nav-arrows">
+    <!--<div class="nav-arrows">
       <a href="#box1"><i class="fa fa-circle-o" id="circle1"></i></a>
       <a href="#box1"><i class="fa fa-circle-o" id="circle2"></i></a>
       <a href="#box1"><i class="fa fa-circle-o" id="circle3"></i></a>
-    </div>
+    </div>-->
 
 
-  <div id="boxes">
-    <h2>Work</h2>
+    <div id="boxes">
+      <h2>Work</h2>
+      <div class="boxes-inner">
+    
+        <div class="box1">  
+          <a href="http://theaskingprice.org/beer/"><p class="boxes-description"><span class="captionHead">Barreling Ahead</span><br />My capstone project at Medill. Was tasked with producing a one-page, immersive, fully interactive story. The topic of choice was the craft beer industry. While all students were required to use Bootstrap as a base, I hand-coded the remainder of the site. Discovered the greatness of jQuery's smooth scroll, and can now hold my own in conversations with most beer snobs.</p></a>
+          <img src="images/beer.jpg" /> 
+        </div>
 
-    <div class="boxes-inner">
+        <div class="box2">
+          <a href="http://gelf.me/nbn/new.html"><p class="boxes-description"><span class="captionHead">North By Northwestern</span><br />A three-month project redesigning the homepage and article page for website of Northwestern's magazine. Extensive iterating and wireframing in InDesign/Photoshop/pen & paper for all device sizes, considerable typography research and hand-coding each page from scratch.</p></a>
+          <img src="images/article.jpg" /> 
+        </div>
 
-      <div class="box1">
-        <h3>Barreling Ahead</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <img src="images/beer.jpg" /> 
-      </div>
+        <div class="box3">
+          <a href="http://mswartz.github.io/backstory/"><p class="boxes-description"><span class="captionHead">Backstory</span><br />Backstory is an app that allows users to experience a succinct timeline of a news story's events in a single view. Created by myself and three others over 36 hours at a Society for News Design hackathon. It's cross-device compatible, and features UI thats provides readers with a lightweight, engaging way to interact with a story.</p></a>
+          <img src="images/jayz.jpg"/>
+        </div>
 
-      <div class="box2">
-        <h3>North by Northwestern</h3>
-        <img src="images/article.jpg" /> 
-      </div>
+        <div class="box4">
+          <a href="http://usatoday30.usatoday.com/sports/baseball/fantasy/shandler/story/2012-06-05/unlucky-hitters-babip/55400264/1"><p class="boxes-description"><span class="captionHead">Writing Clips</span><br />M.S. in Interactive Publishing from Northwestern's Medill School of Journalism. Background consists primarily of positions at sports & lifestyle publications, including UrbanDaddy, The Improper Bostonian and Bleacher Report. Been featured in USA Today, Yahoo! Sports and CBS, and currently write weekly columns for BaseballHQ.com. Clips available upon request.</p></a> 
+          <img src="images/improper.jpg" /> 
+        </div>
 
-      <div class="box3">
-        <h3>Backstory</h3>
-        <img src="images/jayz.jpg"/>
-      </div>
+        <div class="box5">
+          <a href="http://anamarx.com/wp/"><p class="boxes-description"><span class="captionHead">Wordpress Portfolio</span><br />Commissioned to develop a Wordpress portfolio for a high school student's college application process. Mapped out the skeleton, but project has since stalled for various reasons.</p></a>
+          <img src="images/wordpress.jpg" /> 
+        </div>
 
-      <div class="box4"> 
-        <h3>Writing</h3>
-        <img src="images/improper.jpg" /> 
-      </div>
+        <div class="box6">
+         <a href="http://gelf.me/cutler/cutler.html"><p class="boxes-description"><span class="captionHead">Cutler Screen Crack</span><br />An experimentation with CSS3 animation that speaks to Jay Cutler's arm strength. Hover over the football for the effect. And wherever your volume is right now, cut it in half.</p></a>
+          <img src="images/cutler.jpg" />
+        </div>
 
-      <div class="box5">
-        <h3>Wordpress Portfolio Build</h3>
-        <img src="images/wordpress.jpg" /> 
-      </div>
-
-      <div class="box6">
-        <h3>Cutler Screen Break</h3>
-        <img src="images/cutler.jpg" />
-      </div>
-
-    </div><!--end boxes inner-->
-  </div><!--end boxes-->
+      </div><!--end boxes inner-->
+    </div><!--end boxes-->
 
   <footer>
     <div class="about" id="bio"> 
       <h2>About</h2>
-      <p>A mentor once told that me in order to become skilled at anything, you have to try it, and you have to be bad at it. That was my barrier into design and development for years - the fear of being bad. Many sleepless nights and duct-tape websites later, I've amassed a considerable skill-set in code to complement a strong background in journalism. I'm obsessive about <span>typography</span>, code semantically in <span>both HTML5 and div-based layouts</span> and am constantly experimenting with<span> alternative page designs</span>. I also prefer amber beers and am a fantasy sports junkie. <span class="mobile-remove">Below you'll see I'm also on the social media, and have regularly updated Github and Dribbble accounts.</span><span class="mobile-add">You can email me <a href="mailto:matthew.gelfand@gmail.com">here.</a></span></p>
+      <p>A mentor once told that me in order to become skilled at anything, you have to try it, and you have to be bad at it. That was my barrier into design and development for years - the fear of being bad. Many sleepless nights and duct-tape websites later, I've amassed a considerable skill-set in design and code to complement a master's degree in journalism. I can be an asset in all stages of the design process - from <span>wireframing</span> in Photoshop and InDesign to <span>rapidly coding</span> a prototype in the browser, I blur the line between <span>designer</span> and <span>developer</span> and can act as a liason between both specialties. I also prefer amber beers and am a fantasy sports junkie. <span class="mobile-remove">Below you'll see I'm on the social media, and have regularly updated Github and Dribbble accounts.</span><span class="mobile-add">You can email me <a href="mailto:matthew.gelfand@gmail.com">here.</a></span></p>
     </div>
 
      <div class="contact" id="contact_me"> 
       <h2>Contact</h2>
         <ul>
           <li><a href="mailto:matthew.gelfand@gmail.com">matthew.gelfand@gmail.com</a></li>
-          <li><a href="img/rezz.pdf">resume</a></li>
+          <li><a href="images/rezz.pdf">resume</a></li>
         </ul>
     </div>
 
@@ -141,10 +135,10 @@
   </footer>
  
   </div><!--end wrap-->
-  <h5>Copyright Matthew Gelfand 2014</h5>
+  <h5>Copyright Matthew Gelfand 2014 (<a href="http://gelf.me/v1.html">v1 here)</a></h5>
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/smoothscroll.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/smoothscroll.js"></script>
 <script src="js/main.js"></script>
 
 </body>

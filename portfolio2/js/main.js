@@ -45,4 +45,6 @@ function hasScrolled() {
 }
 
 
+ontouchstart="this.classList.toggle('hover');"
+
 

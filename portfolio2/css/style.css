@@ -123,11 +123,11 @@ nav a:hover {
 	position: relative;
 	padding-top:50px;
 	width: 500px;
-	opacity: .5;
+	opacity: .7;
 }
 
 .name:hover {
-	opacity: .7;
+	opacity: .9;
 }
 
 .name h2 {
@@ -169,32 +169,6 @@ nav a:hover {
 	top:50px;
 	right:-5px;
 }
-
-/* CIRCLES */
-
-#circle1 {
-	color:rgba(255,210,0,.9);
-	top:60px;
-	right:20px;
-	position: absolute;
-	display: block;
-}
-
-
- #circle2 {
-	color:rgba(255,210,0,.9);
-	top:90px;
-	right:20px;
-	position: absolute;
-}
-  
- #circle3 {
-	color:rgba(255,210,0,.9);
-	top:120px;
-	right:20px;
-	position: absolute;
-}  
-
 
 /*BOXES*/
 
@@ -269,11 +243,11 @@ nav a:hover {
   font-size: 14px;
   font-family: 'open-sans';
   font-weight: 400;
-   -webkit-transition:.4 ease all;
-  -moz-transition:.4 ease all;
-  -ms-transition:.4 ease all;
-  -o-transition:.4 ease all;
-  transition:.4 ease all;
+   -webkit-transition:.4s ease all;
+  -moz-transition:.4s ease all;
+  -ms-transition:.4s ease all;
+  -o-transition:.4s ease all;
+  transition:.4s ease all;
 }
 
 .boxes-inner > div:hover .boxes-description {
@@ -285,8 +259,6 @@ nav a:hover {
   -o-transition:.4s ease all;
   transition:.4s ease all;
 }
-
-
 
 /* FOOTER */
 
@@ -419,6 +391,49 @@ footer > div {
 	color:#ffd200;
 }
 
+
+/* flipper */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 260px;
+	height: 260px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
 
 /* MEDIA QUERIES */
 

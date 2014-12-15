@@ -1,46 +1,47 @@
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Portfolio 3</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel='stylesheet' href='css/style.css' />
-<link rel='stylesheet' href='css/normalize.css' />
-<!--hover.css-->
-<link href="css/hover-min.css" rel="stylesheet" media="all">
-<!--Google Fonts-->
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<!--Font Awesome-->
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<!--Typekit-->
-<script src="//use.typekit.net/oyg1ukm.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-<!--LightSlider-->
-<link rel='stylesheet' href='css/lightSlider.css' />
-<!--Typed.js-->
-<link rel='stylesheet' href='css/main.css' />
-</head>
-<body>
+	<head>
+	<meta charset="UTF-8">
+	<title>Portfolio 3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Font Awesome-->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!--Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='css/style.css' />
+
+	<!-- links -->
+	<link rel="apple-touch-icon" href="http://www.freshtilledsoil.com/wp-content/themes/fresh-phase-3-1/images/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="http://www.freshtilledsoil.com/wp-content/themes/fresh-phase-3-1/images/apple-touch-icon-ipad-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://www.freshtilledsoil.com/wp-content/themes/fresh-phase-3-1/images/apple-touch-icon-iphone-retina-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="http://www.freshtilledsoil.com/wp-content/themes/fresh-phase-3-1/images/apple-touch-icon-ipad-retina-precomposed.png" />
+	<link rel="icon" href="http://www.freshtilledsoil.com/wp-content/themes/fresh-phase-3-1/images/favicon.png">
+	<!--[if IE]>
+	<link rel="shortcut icon" href="http://www.freshtilledsoil.com/wp-content/themes/fresh-phase-3-1/images/favicon.ico">
+	<![endif]-->
+	</head>
+	<body>
 	<div class="wrap" id="home">
-		
-		<nav>
-			<figure class="home-logo float">
-				<a href="#home" class="smoothScroll"><img src="img/home.png" /></a>
-			</figure>
+		<header role="banner">
+			<nav role="navigation">
+				<ul class="home-nav">
+					<li>
+						<a href="#home" class="smoothScroll">Home</a>
+					</li>
+					<li>
+						<a href="#about-me" class="smoothScroll">About</a>
+					</li>
 
-			<ul>
-				<li>
-					<a href="#about-me" class="smoothScroll"><h2>About</h2></a>
-				</li>
+					<li>
+						<a href="#portfolio" class="smoothScroll">Work</a>
+					</li>
 
-				<li>
-					<a href="#portfolio" class="smoothScroll"><h2>Work</h2></a>
-				</li>
-
-				<li>
-					<a href="#contact-me" class="smoothScroll"><h2>Contact</h2></a>
-				</li>
-			</ul>
-		</nav>
+					<li>
+						<a href="#contact-me" class="smoothScroll">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 		
 		<section class="welcome-section" id="typed"></section>
 
@@ -49,64 +50,64 @@
 		</div>
 
 		<a href="#about-me" class="smoothScroll" id="down">
-			<img src="img/down-chev2.png" />
+			<img src="img/down-chev2.png" alt="down chevron" />
 		</a>
 
 		<section class="about" id="about-me">
-			<img src="img/cries.png" />
-			<h4>Let me elaborate</h4>
+			<img src="img/cries.png" alt="mugshot" />
+			<h1>Let me elaborate</h1>
 			<p>I'm what some might call a "journo-coder," which basically means I can code your website and write some nifty content for it too. I can also carve up wireframes in Balsamiq or InDesign, add life to them in Photoshop and rapidly code said wireframes in the browser with minimal turnaround time. <br /> <br />I recently earned a master's degree in interactive publishing from <a href="http://www.medill.northwestern.edu/experience/msj/"><span class="nw">this fine institution</span></a>. On the side, I write weekly columns about fantasy baseball.</p>
 		</section>
 
 		<section class="work" id="portfolio">
 			<ul id="lightSlider">
 				<li>
-					<img src="img/mockup-backstory.png"/>
+					<img src="img/mockup-backstory.png" alt="screenshot of backstory homepage set on mac laptop" />
 					<div class="description">
 						<h2>Backstory</h2>
 						<p>Backstory is an app that allows users to experience a succinct timeline of a news story's events in a single view. Created by myself and three others over 36 hours at a Society for News Design hackathon. It's cross-device compatible, and features UI thats provides readers with a lightweight, engaging way to interact with a story.</p>
-						<a href="http://mswartz.github.io/backstory/">Take me there.</a>
+						<a href="http://mswartz.github.io/backstory/" role="button">Take me there.</a>
 					</div>
 				</li>
 
 				<li>
-					<img src="img/mockup-nbn.png"/>
+					<img src="img/mockup-nbn.png" alt="screenshot of north by northwestern homepage set on mac laptop"/>
 					<div class="description">
 						<h2>North by Northwestern</h2>
 						<p>A three-month project redesigning the homepage and article page for website of Northwestern's magazine. I performed extensive iterating and wireframing in InDesign/Photoshop/pen & paper for all device sizes, and did considerable typography research. Both pages were hand-coded from scratch.</p>
-						<a href="http://gelf.me/nbn/new.html">Take me there.</a>
+						<a href="http://gelf.me/nbn/new.html" role="button">Take me there.</a>
 					</div>
 				</li>
 
 				<li>
-					<img src="img/mockup-barreling.png"/>
+					<img src="img/mockup-barreling.png" alt="screenshot of barreling ahead homepage set on mac laptop mockup"/>
 					<div class="description">
 						<h2>Barreling Ahead</h2>
 						<p>My capstone project at Medill. Was tasked with producing a one-page, immersive, fully interactive story. The topic of choice was the craft beer industry. While all students were required to use Bootstrap as a base, I hand-coded the remainder of the site. Discovered the greatness of jQuery's smooth scroll, and can now hold my own in conversations with most beer snobs.</p>
-						<a href="http://theaskingprice.org/beer/">Take me there.</a>
+						<a href="http://theaskingprice.org/beer/" role="button">Take me there.</a>
 					</div>
 				</li>
 
 				<li>
-					<img src="img/mockup-bhq1.png"/>
+					<img src="img/mockup-bhq1.png" alt="screenshot of baseballhq homepage set on mac laptop" />
 					<div class="description">
 						<h2>BaseballHQ Landing Page</h2>
 						<p>A prototype for a new landing page for BaseballHQ.com. Utilizes a variety of UX best practices to induce clicks and gain readers (near completion).</p>
-						<a href="http://gelf.me/bhq/">Take me there.</a>
+						<a href="http://gelf.me/bhq/" role="button">Take me there.</a>
 					</div>
 				</li>
 
 				<li>
-					<img src="img/mockup-cutler.png"/>
+					<img src="img/mockup-cutler.png" alt="screenshot of jay cutler screen crack set on mac laptop" />
 					<div class="description">
 						<h2>Jay Cutler Screen Break</h2>
 						<p>An experimentation with CSS3 animation that speaks to Jay Cutler's arm strength. Hover over the football for the effect. And wherever your volume is right now, cut it in half.</p>
-						<a href="http://gelf.me/cutler/cutler.html">Take me there.</a>
+						<a href="http://gelf.me/cutler/cutler.html" role="button">Take Me There.</a>
 					</div>
 				</li>
 
 				<li>
-					<img src="img/mockup-words.png"/>
+					<img src="img/mockup-words.png" alt="screenshot of USA TODAY image set on mac laptop" />
 					<div class="description">
 						<h2>Words</h2>
 						<p>I received an M.S. in Interactive Publishing from Northwestern's Medill School of Journalism. My writing background consists primarily of positions at sports & lifestyle publications and have been featured in USA Today, Yahoo! Sports and CBS. Currently, I write weekly fantasy baseball columns for BaseballHQ.com. Clips available upon request.</p>
@@ -117,7 +118,7 @@
 
 		<section class="contact" id="contact-me">
 			<div>
-				<h3>Reach out</h3>
+				<h1>Reach out</h1>
 				<p>I'm currently looking for job opportunities in the Boston / New York area and am available for freelance work. I usually respond to emails the day I receive them. 
 			</div>
 
@@ -137,9 +138,7 @@
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/jquery.lightSlider.min.js"></script>
-<script src="js/typed.js"></script>
+<script src="js/plugin.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
